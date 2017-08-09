@@ -1,0 +1,43 @@
+<div class="ic-breadcrumb-line">
+    <ng-template ngFor let-cate="$implicit" [ngForOf]="categoriesNew" let-i="index">
+        <a href="javascript:" [routerLink]="[OpenLink('NEWS')]" [queryParams]="{type: cate.id }" class="{{ currentCate.id == cate.id ? 'current' : '' }}">{{cate.name}}</a>
+    </ng-template>
+</div>
+
+<div class="ic-home-news ic-news">
+    <div class="container">
+        <div class="ic-news-focus" *ngIf="news[0]">
+            <div class="ic-news-focus-left">
+                <a href="javascript:" [routerLink]="[OpenLink('NEW_DETAIL',news[0].body.id)]">
+                    <ick-img class="media-object" [src]="news[0].body.news.thumb" [title]="news[0].body.news.title" [alt]="news[0].body.news.title" size="medium" width="460" height="287"></ick-img>
+                </a>
+            </div>
+
+            <div class="ic-news-focus-body">
+                <h2><a href="javascript:" [routerLink]="[OpenLink('NEW_DETAIL',news[0].body.id)]">{{news[0].body.news.title}}</a></h2>
+                <div class="ic-like-share">
+                    <a href="javascript:"  class="ic-icon-like" (click)="like(news[0])">{{news[0].footer.like_count}}</a>
+                    <a href="javascript:" class="ic-icon-comment" (click)="comment(news[0])">{{news[0].footer.comment_count}}</a>
+                </div>
+                {{news[0].body.news.description}}
+                <div class="ic-more">
+                    <a href="javascript:" [routerLink]="[OpenLink('NEW_DETAIL',news[0].body.id)]">Xem tin</a>
+                </div>
+            </div>
+
+            <div class="ic-clear"></div>
+                <sd-comments *ngIf="commentQuery" [query]="commentQuery" [total]="news[0].footer.comment_count"></sd-comments>
+        </div>
+
+        <div class="row" *ngIf="news" infinite-scroll
+             [infiniteScrollDistance]="1.5"
+             [infiniteScrollThrottle]="700"
+             (scrolled)="onScroll(currentCate?.id)">
+            <ng-template ngFor let-new="$implicit" [ngForOf]="news" let-i="index">
+            <div class="col-xs-4">
+                <ick-new [new]="new"></ick-new>
+            </div>
+            </ng-template>
+        </div>
+    </div>
+</div>

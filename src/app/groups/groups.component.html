@@ -1,0 +1,18 @@
+
+<div class="ic-breadcrumb-line">
+    <a href="javascript:" [routerLink]="[OpenLink('TOP_GROUP')]" [routerLinkActive]="['current']">Các cộng đồng</a>
+    <a href="javascript:" [routerLink]="[OpenLink('TOP_USER')]" [routerLinkActive]="['current']">Người dùng</a>
+</div>
+
+<div class="ic-layout-cd">
+    <div class="container">
+        <div class="ic-cd-items">
+
+            <div class="ic-home-follow-item" *ngFor="let group of groups">
+                <ick-group [group]="group"></ick-group>
+            </div>
+
+            <div class="ic-clear"></div>
+        </div>
+    </div>
+</div>

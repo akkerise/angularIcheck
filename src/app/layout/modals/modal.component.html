@@ -1,0 +1,17 @@
+<div class="modal fade" bsModal #staticModal="bs-modal" [config]="{backdrop: 'static'}"
+     tabindex="-1" role="dialog" [attr.aria-labelledby]="'reportModal'+objectId" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title pull-left">{{content ? content.text : 'Tiêu đề'}}</h4>
+                <button type="button" class="close pull-right" aria-label="Close"
+                        (click)="close()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" *ngIf="questions.length > 0">
+                <dynamic-form [questions]="questions" (onSuccess)="onResult($event)" (onFail)="onError($event)"></dynamic-form>
+            </div>
+        </div>
+    </div>
+</div>

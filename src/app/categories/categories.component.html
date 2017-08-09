@@ -1,0 +1,62 @@
+  <div id="ic-layout-main">
+    <div class="container">
+
+      <div class="ic-cate">
+        <div class="ic-cate-cols" *ngIf="datas | async">
+          <div class="ic-cate-col" *ngFor="let item of datas | async">
+            <div class="ic-cate-name" [ngStyle]="{'background-image': 'url('+item.image+')'}">
+              <a href="javascript:" [routerLink]="[OpenLink('BROWSER',item.id)]">{{item.name}}</a>
+            </div>
+          </div>
+
+          <div class="ic-clear"></div>
+
+          <!--<div class="ic-cate-col">-->
+            <!--<ul>-->
+              <!--<li><a href="danh_muc_2.php">Danh mục con 1</a></li>-->
+              <!--<li><a href="danh_muc_2.php">Danh mục con 2</a></li>-->
+              <!--<li><a href="danh_muc_2.php">Danh mục con 3</a></li>-->
+              <!--<li><a href="danh_muc_2.php">Danh mục con 4</a></li>-->
+              <!--<li><a href="danh_muc_2.php">Danh mục con 5</a></li>-->
+            <!--</ul>-->
+          <!--</div>-->
+
+          <!--<div class="ic-cate-col">-->
+            <!--<ul>-->
+              <!--<li><a href="danh_muc_2.php">Danh mục con 6</a></li>-->
+              <!--<li><a href="danh_muc_2.php">Danh mục con 7</a></li>-->
+              <!--<li><a href="danh_muc_2.php">Danh mục con 8</a></li>-->
+              <!--<li><a href="danh_muc_2.php">Danh mục con 9</a></li>-->
+              <!--<li><a href="danh_muc_2.php">Danh mục con 10</a></li>-->
+            <!--</ul>-->
+          <!--</div>-->
+
+          <!--<div class="ic-cate-col">-->
+            <!--<ul>-->
+              <!--<li><a href="danh_muc_2.php">Danh mục con 11</a></li>-->
+              <!--<li><a href="danh_muc_2.php">Danh mục con 12</a></li>-->
+              <!--<li><a href="danh_muc_2.php">Danh mục con 13</a></li>-->
+              <!--<li><a href="danh_muc_2.php">Danh mục con 14</a></li>-->
+              <!--<li><a href="danh_muc_2.php">Danh mục con 15</a></li>-->
+            <!--</ul>-->
+          <!--</div>-->
+
+          <!--<div class="ic-cate-col">-->
+            <!--<ul>-->
+              <!--<li><a href="danh_muc_2.php">Danh mục con 16</a></li>-->
+              <!--<li><a href="danh_muc_2.php">Danh mục con 17</a></li>-->
+              <!--<li><a href="danh_muc_2.php">Danh mục con 18</a></li>-->
+              <!--<li><a href="danh_muc_2.php">Danh mục con 19</a></li>-->
+              <!--<li><a href="danh_muc_2.php">Danh mục con 20</a></li>-->
+            <!--</ul>-->
+          <!--</div>-->
+
+          <div class="ic-clear"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <ng-template ngFor let-item [ngForOf]="blocks" let-i="index">
+      <dynamic-component [componentData]="item"></dynamic-component>
+  </ng-template>

@@ -1,0 +1,831 @@
+<?php include 'header.php'; ?>
+
+    <div class="ic-main" id="ic-main">
+        <div class="container">
+            <div class="ic-layout-left visible-lg-block">
+                <div class="ic-menu">
+                    <ul>
+                        <li class="lv-1">
+                            <a href="home.php" class="lv-a1 ">Trang chủ</a>
+                            <ul>
+                                <li>
+                                    <a href="#">Tải App</a>
+                                </li>
+                                <li>
+                                    <a href="#">Tin tức</a>
+                                </li>
+                                <li>
+                                    <a href="#">Top HOT</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="lv-1 current">
+                            <a href="follow.php" class="lv-a1 lv-a1-follow">Follow</a>
+                        </li>
+
+                        <li class="lv-1">
+                            <a href="cate.php" class="lv-a1 lv-a1-cate">Danh mục</a>
+                        </li>
+
+                        <li class="lv-1">
+                            <a href="user.php" class="lv-a1  lv-a1-user">Cá nhân</a>
+                        </li>
+
+                        <li class="lv-1">
+                            <a href="contact.php" class="lv-a1 lv-a1-contact">Liên hệ &amp; Góp ý</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="ic-layout-main">
+
+                <div class="ic-follow-layout">
+                    <div class="ic-notice-download">
+                        Dùng ứng dụng iCheck trên smartphone để quét sản phẩm cũng như đánh giá trực tiếp <a href="">Tải ngay</a>
+                    </div>
+
+                    <div class="ic-post-status">
+                        <form method="post" action="" name="my_form">
+                            <a class="ic-avatar">
+                                <img src="images/q/av-b1.png" alt="" title="" />
+                            </a>
+
+                            <input class="ic-text" placeholder="Loại ngước ngọt đóng chai bạn uống gần đây nhất nó như thế nào ?" type="text" value="" name="status" />
+
+                            <div class="ic-add-image">
+                                <label for="file-upload">
+                                    Custom Upload
+                                </label>
+                                <input type="file" id="file-upload" />
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <div class="ic-l">
+
+                        <div class="ic-widget">
+                            <div class="ic-widget-header">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img src="images/q/av-2.png" width="40" height="40" class="ic-avatar" alt="" title="" />
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <a href="#" class="ic-name-author">
+                                            Đỗ Hoài
+                                        </a>
+                                        <time>10 phút trước</time>
+                                    </div>
+                                </div>
+
+                                <div class="ic-drop-select">
+                                    <a href="#" class="ic-open-menu">Chọn</a>
+                                    <ul>
+                                        <li><a href="#">Báo cáo vi phạm</a> </li>
+                                        <li><a href="#">Ẩn bài viết</a> </li>
+                                        <li><a href="#">Gửi tin nhắn</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="ic-widget-content">Đã có ai sài chưa ... aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+
+                            <div class="ic-widget-footer">
+                                <a href="#" class="ic-icon-like">1</a>
+                                <a href="#" class="ic-icon-comment">0</a>
+                            </div>
+
+                            <div class="ic-widget-footer-liked">
+                                <a data-toggle="tooltip" data-html="true" title="ĐỐ Phương <br> Hoài Thu">Bạn, Đỗ Phạm và 10 người khác thích</a>
+                            </div>
+
+                            <div class="ic-widget-comments">
+
+                                <div class="ic-widget-comment-more">
+                                    <a href="#">Xem thêm 10 bình luận khác</a>
+                                </div>
+
+                                <div class="ic-widget-comment">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#">
+                                                <img src="images/q/av-2.png" width="32" height="32" class="ic-avatar" alt="" title="" />
+                                            </a>
+                                        </div>
+
+                                        <div class="media-body">
+                                            <a href="#" class="ic-name-author">
+                                                Đỗ Hoài
+                                            </a>
+                                            Thấy 1 số kênh lớn mấy trăm ngàn SUB xóa hết videos
+
+                                            <div class="ic-widget-comment-tool">
+                                                <a href="#" class="ic-icon-like">1</a>
+                                                <a href="#" class="ic-icon-comment">0</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="ic-widget-comment">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#">
+                                                <img src="images/q/av-6.png" width="32" height="32" class="ic-avatar" alt="" title="" />
+                                            </a>
+                                        </div>
+
+                                        <div class="media-body">
+                                            <a href="#" class="ic-name-author">
+                                                Quỳnh Anh
+                                            </a>
+                                            bbbbbbbbbbbbb
+
+                                            <div class="ic-widget-comment-tool">
+                                                <a href="#" class="ic-icon-like">1</a>
+                                                <a href="#" class="ic-icon-comment">0</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ic-widget-comments-post">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img src="images/q/av-5.png" width="32" height="32" class="ic-avatar" alt="" title="" />
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <input type="text" value="" name="" placeholder="Bình luận của bạn" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ic-widget">
+                            <div class="ic-widget-header">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img src="images/q/av-2.png" width="40" height="40" class="ic-avatar" alt="" title="" />
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <a href="#" class="ic-name-author">
+                                            Đỗ Hoài
+                                        </a>
+                                        <time>10 phút trước</time>
+                                    </div>
+                                </div>
+
+                                <div class="ic-drop-select">
+                                    <a href="#" class="ic-open-menu">Chọn</a>
+                                    <ul>
+                                        <li><a href="#">Báo cáo vi phạm</a> </li>
+                                        <li><a href="#">Ẩn bài viết</a> </li>
+                                        <li><a href="#">Gửi tin nhắn</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="ic-widget-content">Đã có ai sài chưa ...</div>
+
+                            <div class="ic-widget-product">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img src="images/q/p-122.jpg" alt="" title="" width="50" />
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <a href="product_detail.php" class="ic-name-product">
+                                            Hộp Dưỡng Ẩm Thông Minh Kích Hoạt Và Giữ Nước ...
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="ic-price">
+                                    Giá tham khảo <span>899.000đ</span>
+                                </div>
+                            </div>
+
+                            <div class="ic-widget-footer">
+                                <a href="#" class="ic-icon-like">1</a>
+                                <a href="#" class="ic-icon-comment">0</a>
+                            </div>
+
+                            <div class="ic-widget-comments-post">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img src="images/q/av-5.png" width="32" height="32" class="ic-avatar" alt="" title="" />
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <input type="text" value="" name="" placeholder="Bình luận của bạn" />
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="ic-widget-plug">
+                            <strong>Trường</strong> vừa thích một bài viết của <strong>Mr.No123</strong>
+                        </div>
+                        <div class="ic-widget">
+                            <div class="ic-widget-header">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img src="images/q/av-5.png" width="40" height="40" class="ic-avatar" alt="" title="" />
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <a href="#" class="ic-name-author">
+                                            Mr.No123
+                                        </a>
+                                        <time>20 phút trước</time>
+                                    </div>
+                                </div>
+
+                                <div class="ic-drop-select">
+                                    <a href="#" class="ic-open-menu">Chọn</a>
+                                    <ul>
+                                        <li><a href="#">Báo cáo vi phạm</a> </li>
+                                        <li><a href="#">Ẩn bài viết</a> </li>
+                                        <li><a href="#">Gửi tin nhắn</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="ic-widget-news">
+                                <div class="ic-thumb">
+                                    <a href="#">
+                                        <img class="img-responsive" src="images/q/ne-5.jpg" alt="CEO Amazon trở thành tỉ phú giàu thứ 2 trên thế giới, sau Bill Gates" title="" />
+                                    </a>
+                                </div>
+                                <div class="ic-extract">
+                                    <h3>
+                                        <a href="#">So sánh các chế độ chụp ảnh trong Galaxy S8</a>
+                                    </h3>
+                                    <p>Samsung đã giới thiệu một số ảnh mẫu để phô diễn chất lượng camera trên bộ đôi smartphone mới. ... </p>
+                                </div>
+                            </div>
+
+                            <div class="ic-widget-footer">
+                                <a href="#" class="ic-icon-like">231</a>
+                                <a href="#" class="ic-icon-comment">10</a>
+                            </div>
+
+                            <div class="ic-widget-comments-post">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img src="images/q/av-5.png" width="32" height="32" class="ic-avatar" alt="" title="" />
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <input type="text" value="" name="" placeholder="Bình luận của bạn" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ic-widget">
+                            <div class="ic-widget-header">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img src="images/q/av-10.png" width="40" height="40" class="ic-avatar" alt="" title="" />
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <a href="#" class="ic-name-author">
+                                            Quỳnh Kun
+                                        </a>
+                                        <time>20 phút trước</time>
+                                    </div>
+                                </div>
+
+                                <div class="ic-drop-select">
+                                    <a href="#" class="ic-open-menu">Chọn</a>
+                                    <ul>
+                                        <li><a href="#">Báo cáo vi phạm</a> </li>
+                                        <li><a href="#">Ẩn bài viết</a> </li>
+                                        <li><a href="#">Gửi tin nhắn</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="ic-widget-news">
+                                <div class="ic-thumb">
+                                    <a href="#">
+                                        <img class="img-responsive" src="images/q/ne-4.png" alt="CEO Amazon trở thành tỉ phú giàu thứ 2 trên thế giới, sau Bill Gates" title="" />
+                                    </a>
+                                </div>
+                                <div class="ic-extract">
+                                    <h3>
+                                        <a href="#">Hot girl Thái Lan nhận được “bão like” khi mặc áo dài Việt</a>
+                                    </h3>
+                                    <p>Hàng ngàn dân mạng Việt Nam gửi lời khen với hình ảnh mặc áo dài của ca sĩ online đến từ Thái Lan Jannine Weigel ... </p>
+                                </div>
+                            </div>
+
+                            <div class="ic-widget-footer">
+                                <a href="#" class="ic-icon-like">231</a>
+                                <a href="#" class="ic-icon-comment">10</a>
+                            </div>
+
+                            <div class="ic-widget-comments-post">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img src="images/q/av-5.png" width="32" height="32" class="ic-avatar" alt="" title="" />
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <input type="text" value="" name="" placeholder="Bình luận của bạn" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ic-widget">
+                            <div class="ic-widget-header">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img src="images/q/av-10.png" width="40" height="40" class="ic-avatar" alt="" title="" />
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <a href="#" class="ic-name-author">
+                                            Quỳnh Kun
+                                        </a>
+                                        <time>20 phút trước</time>
+                                    </div>
+                                </div>
+
+                                <div class="ic-drop-select">
+                                    <a href="#" class="ic-open-menu">Chọn</a>
+                                    <ul>
+                                        <li><a href="#">Báo cáo vi phạm</a> </li>
+                                        <li><a href="#">Ẩn bài viết</a> </li>
+                                        <li><a href="#">Gửi tin nhắn</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="ic-widget-news">
+                                <div class="ic-thumb">
+                                    <a href="#">
+                                        <img class="img-responsive" src="images/q/ne-4.png" alt="CEO Amazon trở thành tỉ phú giàu thứ 2 trên thế giới, sau Bill Gates" title="" />
+                                    </a>
+                                </div>
+                                <div class="ic-extract">
+                                    <h3>
+                                        <a href="#">Hot girl Thái Lan nhận được “bão like” khi mặc áo dài Việt</a>
+                                    </h3>
+                                    <p>Hàng ngàn dân mạng Việt Nam gửi lời khen với hình ảnh mặc áo dài của ca sĩ online đến từ Thái Lan Jannine Weigel ... </p>
+                                </div>
+                            </div>
+
+                            <div class="ic-widget-footer">
+                                <a href="#" class="ic-icon-like">231</a>
+                                <a href="#" class="ic-icon-comment">10</a>
+                            </div>
+                        </div>
+
+                    </div> <?php /*** END: ic-l ***/ ?>
+
+                    <div class="ic-r">
+                        <div class="ic-widget">
+                            <div class="ic-widget-header">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img src="images/q/av-2.png" width="40" height="40" class="ic-avatar" alt="" title="" />
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <a href="#" class="ic-name-author">
+                                            Đỗ Hoài
+                                        </a>
+                                        <time>20 phút trước</time>
+                                    </div>
+                                </div>
+
+                                <div class="ic-drop-select">
+                                    <a href="#" class="ic-open-menu">Chọn</a>
+                                    <ul>
+                                        <li><a href="#">Báo cáo vi phạm</a> </li>
+                                        <li><a href="#">Ẩn bài viết</a> </li>
+                                        <li><a href="#">Gửi tin nhắn</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="ic-widget-content">Xin chào các bạn</div>
+
+                            <div class="ic-widget-footer">
+                                <a href="#" class="ic-icon-like">0</a>
+                                <a href="#" class="ic-icon-comment">0</a>
+                            </div>
+                        </div>
+
+                        <div class="ic-widget">
+                            <div class="ic-widget-header">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img src="images/q/av-b1.png" width="40" height="40" class="ic-avatar" alt="" title="" />
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <a href="#" class="ic-name-author">
+                                            Trần Quỳnh Anh
+                                        </a>
+                                        <time>20 phút trước</time>
+                                    </div>
+                                </div>
+
+                                <div class="ic-drop-select">
+                                    <a href="#" class="ic-open-menu">Chọn</a>
+                                    <ul>
+                                        <li><a href="#">Báo cáo vi phạm</a> </li>
+                                        <li><a href="#">Ẩn bài viết</a> </li>
+                                        <li><a href="#">Gửi tin nhắn</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="ic-widget-news">
+                                <div class="ic-thumb">
+                                    <a href="#">
+                                        <img class="img-responsive" src="images/q/ne-3.png" alt="CEO Amazon trở thành tỉ phú giàu thứ 2 trên thế giới, sau Bill Gates" title="" />
+                                    </a>
+                                </div>
+                                <div class="ic-extract">
+                                    <h3>
+                                        <a href="#">CEO Amazon trở thành tỉ phú giàu thứ 2 trên thế giới, sau Bill Gates</a>
+                                    </h3>
+                                    <p>Với việc cổ phiếu của Amazon tăng mạnh thêm 9 tỷ USD trên thị trường chứng khoán ... </p>
+                                </div>
+                            </div>
+
+                            <div class="ic-widget-footer">
+                                <a href="#" class="ic-icon-like">231</a>
+                                <a href="#" class="ic-icon-comment">10</a>
+                            </div>
+                        </div>
+
+                        <div class="ic-widget">
+                            <div class="ic-widget-header">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img src="images/q/av-b1.png" width="40" height="40" class="ic-avatar" alt="" title="" />
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <a href="#" class="ic-name-author">
+                                            Trần Quỳnh Anh
+                                        </a>
+                                        <time>20 phút trước</time>
+                                    </div>
+                                </div>
+
+                                <div class="ic-drop-select">
+                                    <a href="#" class="ic-open-menu">Chọn</a>
+                                    <ul>
+                                        <li><a href="#">Báo cáo vi phạm</a> </li>
+                                        <li><a href="#">Ẩn bài viết</a> </li>
+                                        <li><a href="#">Gửi tin nhắn</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="ic-widget-news">
+                                <div class="ic-thumb">
+                                    <a href="#">
+                                        <img class="img-responsive" src="images/q/ne-3.png" alt="CEO Amazon trở thành tỉ phú giàu thứ 2 trên thế giới, sau Bill Gates" title="" />
+                                    </a>
+                                </div>
+                                <div class="ic-extract">
+                                    <h3>
+                                        <a href="#">CEO Amazon trở thành tỉ phú giàu thứ 2 trên thế giới, sau Bill Gates</a>
+                                    </h3>
+                                    <p>Với việc cổ phiếu của Amazon tăng mạnh thêm 9 tỷ USD trên thị trường chứng khoán ... </p>
+                                </div>
+                            </div>
+
+                            <div class="ic-widget-footer">
+                                <a href="#" class="ic-icon-like">231</a>
+                                <a href="#" class="ic-icon-comment">10</a>
+                            </div>
+                        </div>
+
+                        <div class="ic-widget">
+                            <div class="ic-widget-header">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img src="images/q/av-2.png" width="40" height="40" class="ic-avatar" alt="" title="" />
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <a href="#" class="ic-name-author">
+                                            Đỗ Hoài
+                                        </a>
+                                        <time>10 phút trước</time>
+                                    </div>
+                                </div>
+
+                                <div class="ic-drop-select">
+                                    <a href="#" class="ic-open-menu">Chọn</a>
+                                    <ul>
+                                        <li><a href="#">Báo cáo vi phạm</a> </li>
+                                        <li><a href="#">Ẩn bài viết</a> </li>
+                                        <li><a href="#">Gửi tin nhắn</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="ic-widget-content">Đã có ai sài chưa ...</div>
+
+                            <div class="ic-widget-product">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#">
+                                            <img src="images/q/p-122.jpg" alt="" title="" width="50" />
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <a href="product_detail.php" class="ic-name-product">
+                                            Hộp Dưỡng Ẩm Thông Minh Kích Hoạt Và Giữ Nước ...
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="ic-price">
+                                    Giá tham khảo <span>899.000đ</span>
+                                </div>
+                            </div>
+
+                            <div class="ic-widget-footer">
+                                <a href="#" class="ic-icon-like">1</a>
+                                <a href="#" class="ic-icon-comment">0</a>
+                            </div>
+                        </div>
+                    </div> <?php /*** END: ic-r ***/ ?>
+                </div> <?php /*** END: ic-home-layout-l***/ ?>
+
+                <div class="ic-follow-navbar">
+
+                    <div class="ic-widget-plug">
+                        <strong>Top sản phẩm nên dùng 1/4</strong>
+
+                        <a href="#" class="ic-drop-select">Chọn</a>
+                    </div>
+
+                    <div class="ic-widget-product-items">
+                        <div class="ic-widget-product-item">
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="#">
+                                        <img src="images/q/p-6.jpg" alt="" title="" width="108" class="ic-thumb" />
+                                    </a>
+                                </div>
+
+                                <div class="media-body">
+                                    <a href="product_detail.php" class="ic-name-product ic-warning">
+                                        Hộp Dưỡng Ẩm Thông Minh Kích Hoạt Và Giữ Nước ...
+                                    </a>
+
+                                    <div class="ic-comment-count">60</div>
+
+                                    <div class="ic-price">
+                                        10.000đ
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ic-widget-product-item">
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="#">
+                                        <img src="images/q/p-5.jpg" alt="" title="" width="108" class="ic-thumb" />
+                                    </a>
+                                </div>
+
+                                <div class="media-body">
+                                    <a href="product_detail.php" class="ic-name-product ic-danger">
+                                        Hộp Dưỡng Ẩm Thông Minh Kích Hoạt Và Giữ Nước ...
+                                    </a>
+
+                                    <div class="ic-comment-count">60</div>
+
+                                    <div class="ic-price">
+                                        10.000đ
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ic-widget-product-item">
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="#">
+                                        <img src="images/q/p-1.jpg" alt="" title="" width="108" class="ic-thumb" />
+                                    </a>
+                                </div>
+
+                                <div class="media-body">
+                                    <a href="product_detail.php" class="ic-name-product ic-success">
+                                        Hộp Dưỡng Ẩm Thông Minh Kích Hoạt Và Giữ Nước ...
+                                    </a>
+
+                                    <div class="ic-comment-count">60</div>
+
+                                    <div class="ic-price">
+                                        10.000đ
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="ic-widget">
+                        <div class="ic-widget-header">
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="#">
+                                        <img src="images/q/av-2.png" width="40" height="40" class="ic-avatar" alt="" title="" />
+                                    </a>
+                                </div>
+
+                                <div class="media-body">
+                                    <a href="#" class="ic-name-author">
+                                        Đỗ Hoài
+                                    </a>
+                                    <time>10 phút trước</time>
+                                </div>
+                            </div>
+
+                            <div class="ic-drop-select">
+                                <a href="#" class="ic-open-menu">Chọn</a>
+                                <ul>
+                                    <li><a href="#">Báo cáo vi phạm</a> </li>
+                                    <li><a href="#">Ẩn bài viết</a> </li>
+                                    <li><a href="#">Gửi tin nhắn</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="ic-widget-content">Đã có ai sài chưa ...</div>
+
+                        <div class="ic-widget-product">
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="#">
+                                        <img src="images/q/p-122.jpg" alt="" title="" width="50" />
+                                    </a>
+                                </div>
+
+                                <div class="media-body">
+                                    <a href="product_detail.php" class="ic-name-product">
+                                        Hộp Dưỡng Ẩm Thông Minh Kích Hoạt Và Giữ Nước ...
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="ic-price">
+                                Giá tham khảo <span>899.000đ</span>
+                            </div>
+                        </div>
+
+                        <div class="ic-widget-footer">
+                            <a href="#" class="ic-icon-like">1</a>
+                            <a href="#" class="ic-icon-comment">0</a>
+                        </div>
+                    </div>
+
+                    <div class="ic-widget">
+                        <div class="ic-widget-header">
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="#">
+                                        <img src="images/q/av-b1.png" width="40" height="40" class="ic-avatar" alt="" title="" />
+                                    </a>
+                                </div>
+
+                                <div class="media-body">
+                                    <a href="#" class="ic-name-author">
+                                        Trần Quỳnh Anh
+                                    </a>
+                                    <time>20 phút trước</time>
+                                </div>
+                            </div>
+
+                            <div class="ic-drop-select">
+                                <a href="#" class="ic-open-menu">Chọn</a>
+                                <ul>
+                                    <li><a href="#">Báo cáo vi phạm</a> </li>
+                                    <li><a href="#">Ẩn bài viết</a> </li>
+                                    <li><a href="#">Gửi tin nhắn</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="ic-widget-news">
+                            <div class="ic-thumb">
+                                <a href="#">
+                                    <img class="img-responsive" src="images/q/ne-6.jpg" alt="CEO Amazon trở thành tỉ phú giàu thứ 2 trên thế giới, sau Bill Gates" title="" />
+                                </a>
+                            </div>
+                            <div class="ic-extract">
+                                <h3>
+                                    <a href="#">CEO Amazon trở thành tỉ phú giàu thứ 2 trên thế giới, sau Bill Gates</a>
+                                </h3>
+                                <p>Với việc cổ phiếu của Amazon tăng mạnh thêm 9 tỷ USD trên thị trường chứng khoán ... </p>
+                            </div>
+                        </div>
+
+                        <div class="ic-widget-footer">
+                            <a href="#" class="ic-icon-like">231</a>
+                            <a href="#" class="ic-icon-comment">10</a>
+                        </div>
+                    </div>
+
+                    <div class="ic-widget">
+                        <div class="ic-widget-header">
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="#">
+                                        <img src="images/q/av-2.png" width="40" height="40" class="ic-avatar" alt="" title="" />
+                                    </a>
+                                </div>
+
+                                <div class="media-body">
+                                    <a href="#" class="ic-name-author">
+                                        Đỗ Hoài
+                                    </a>
+                                    <time>20 phút trước</time>
+                                </div>
+                            </div>
+
+                            <div class="ic-drop-select">
+                                <a href="#" class="ic-open-menu">Chọn</a>
+                                <ul>
+                                    <li><a href="#">Báo cáo vi phạm</a> </li>
+                                    <li><a href="#">Ẩn bài viết</a> </li>
+                                    <li><a href="#">Gửi tin nhắn</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="ic-widget-content">Xin chào các bạn</div>
+
+                        <div class="ic-widget-footer">
+                            <a href="#" class="ic-icon-like">0</a>
+                            <a href="#" class="ic-icon-comment">0</a>
+                        </div>
+                    </div>
+
+                </div> <?php /*** END: ic-home-layout-r***/ ?>
+
+                <div class="ic-clear"></div>
+            </div>
+
+            <div class="ic-clear"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $("[data-toggle=tooltip]").tooltip();
+    </script>
+
+<?php include 'footer.php'; ?>

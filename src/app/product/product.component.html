@@ -1,0 +1,208 @@
+
+<div id="ic-layout-main">
+    <div class="container">
+
+        <div class="ic-product-detail" *ngIf="product">
+
+            <div class="ic-product-body">
+                <div class="ic-product-info">
+                    <div class="ic-product-img">
+                        <div class="ic-thumb">
+                            <ick-img [src]="product?.image_default" size="medium" [alt]="product?.product_name" [title]="product?.product_name" class="img-responsive"></ick-img>
+                        </div>
+
+                        <ul *ngIf="product.attachments">
+                            <li *ngFor="let attach of product.attachments">
+                                <ng-template [ngIf]="attach.type == 'image'">
+                                    <a href="#">
+                                        <ick-img [src]="attach.link" size="medium" [alt]="product?.product_name" [title]="product?.product_name" width="47" height="47"></ick-img>
+                                    </a>
+                                </ng-template>
+                            </li>
+                        </ul>
+
+                        <div class="ic-product-detail-rating">
+                            <strong>Mời bạn đánh giá sản phẩm này</strong>
+                            <ul>
+                                <li>
+                                    <a href="javascript:" (click)="vote(1)">
+                                        <span class="ic-success">Đánh giá</span>
+                                        Nên dùng
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:" (click)="vote(0)">
+                                        <span class="ic-warning">Đánh giá</span>
+                                        Cũng được
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:" (click)="vote(-1)">
+                                        <span class="ic-danger">Đánh giá</span>
+                                        Tránh xa
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <div class="ic-clear"></div>
+                        </div>
+                    </div>
+
+                    <div class="ic-product-wap">
+                        <h1>{{product?.product_name}}</h1>
+
+                        <div class="ic-product-code">{{product.internal_code}}</div>
+
+                        <div class="ic-price">
+                            <ick-price [price]="product.price_default" [currency]="product.currency_default"></ick-price>
+                        </div>
+                        <ng-template [ngIf]="product.vendor">
+
+                        <p *ngIf="product.vendor.country">Quốc gia: {{product.vendor.country.name}}</p>
+
+                        <p *ngIf="product.vendor.website">Website: {{product.vendor.website}}</p>
+
+                        <div class="ic-company">
+                            <h3>{{product.vendor.name}}</h3>
+                            <address *ngIf="product.vendor.address">Địa chỉ: {{product.vendor.address}}</address>
+                            <p *ngIf="product.vendor.phone.length > 7">Liên hệ: {{product.vendor.phone}}</p>
+                        </div>
+                        </ng-template>
+
+                        <div class="ic-contact-company">
+                            <a href="#">Liên hệ nhà sản xuất</a>
+                            <a href="#">Gửi khiếu nại cho nhà sản xuất</a>
+                        </div>
+
+                        <div class="ic-user-rating">
+                            <h4>Đánh giá người dùng</h4>
+
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <ick-chart [product]="product"></ick-chart>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ic-clear"></div>
+                </div>
+                <ng-template [ngIf]="product.attributes">
+                <div class="ic-product-check" *ngFor="let attr of product.attributes">
+                    <h4>{{attr.title}}</h4>
+
+                    <div class="ic-entry" [innerHtml]="attr.short_content">
+                    </div>
+                </div>
+                </ng-template>
+
+                <div class="ic-product-best" *ngIf="product.comment_count > 0">
+                    <div id="bs-carousel" class="carousel slide" data-ride="carousel">
+                        <div class="ic-home-news-items carousel-inner" role="listbox">
+                            <div *ngFor="let comment of comments;let i = index" class="item {{i == 0 ? 'active' : ''}}">
+                                <sd-comment-item [comment]="comment" [total]="product.comment_count"></sd-comment-item>
+                            </div>
+                        </div>
+
+                        <ol class="carousel-indicators ic-home-carousel-click">
+                            <li *ngFor="let comment of comments;let i = index" data-target="#bs-carousel" [attr.data-slide-to]="i+1" class="{{i == 0 ? 'active' : ''}}"></li>
+                        </ol>
+
+                        <a class="ic-pn ic-prev" href="#bs-carousel" role="button" data-slide="prev"> Previous </a>
+                        <a class="ic-pn ic-next" href="#bs-carousel" role="button" data-slide="next"> Next </a>
+
+                    </div>
+                </div>
+
+                <div class="ic-product-comments">
+
+                    <h4>Bình luận sản phẩm</h4>
+                    <sd-comments *ngIf="commentQuery" [query]="commentQuery"
+                                 [total]="product.comment_count"></sd-comments>
+
+                </div>
+
+                <!--<div class="ic-product-others">-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-xs-3">-->
+                            <!--<div class="ic-product-other">-->
+                                <!--<div class="ic-thumb">-->
+                                    <!--<img src="images/q/aff.png" alt="" title="" class="img-responsive" />-->
+                                <!--</div>-->
+
+                                <!--<div class="ic-product-other-on">-->
+                                    <!--<h3><a href="#">Cửa hàng thời trang 12</a> </h3>-->
+                                    <!--<p>Số 1212 Ngõ 125 Phường Phú Diễn, Quận Bắc Từ Liêm</p>-->
+                                    <!--<div class="ic-price">-->
+                                        <!--<span>Giá</span>-->
+                                        <!--<strong>14.500.000</strong>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+
+                        <!--<div class="col-xs-3">-->
+                            <!--<div class="ic-product-other">-->
+                                <!--<div class="ic-thumb">-->
+                                    <!--<img src="images/q/aff.png" alt="" title="" class="img-responsive" />-->
+                                <!--</div>-->
+
+                                <!--<div class="ic-product-other-on">-->
+                                    <!--<h3><a href="#">Cửa hàng thời trang 12</a> </h3>-->
+                                    <!--<p>Số 1212 Ngõ 125 Phường Phú Diễn, Quận Bắc Từ Liêm</p>-->
+                                    <!--<div class="ic-price">-->
+                                        <!--<span>Giá</span>-->
+                                        <!--<strong>14.500.000</strong>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+
+                        <!--<div class="col-xs-3">-->
+                            <!--<div class="ic-product-other">-->
+                                <!--<div class="ic-thumb">-->
+                                    <!--<img src="images/q/aff.png" alt="" title="" class="img-responsive" />-->
+                                <!--</div>-->
+
+                                <!--<div class="ic-product-other-on">-->
+                                    <!--<h3><a href="#">Cửa hàng thời trang 12</a> </h3>-->
+                                    <!--<p>Số 1212 Ngõ 125 Phường Phú Diễn, Quận Bắc Từ Liêm</p>-->
+                                    <!--<div class="ic-price">-->
+                                        <!--<span>Giá</span>-->
+                                        <!--<strong>14.500.000</strong>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+
+                        <!--<div class="col-xs-3">-->
+                            <!--<div class="ic-product-other">-->
+                                <!--<div class="ic-thumb">-->
+                                    <!--<img src="images/q/aff.png" alt="" title="" class="img-responsive" />-->
+                                <!--</div>-->
+
+                                <!--<div class="ic-product-other-on">-->
+                                    <!--<h3><a href="#">Cửa hàng thời trang 12</a> </h3>-->
+                                    <!--<p>Số 1212 Ngõ 125 Phường Phú Diễn, Quận Bắc Từ Liêm</p>-->
+                                    <!--<div class="ic-price">-->
+                                        <!--<span>Giá</span>-->
+                                        <!--<strong>14.500.000</strong>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+            </div>
+
+            <div class="ic-product-right">
+
+            </div>
+
+            <div class="ic-clear"></div>
+        </div>
+
+    </div>
+</div>

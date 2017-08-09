@@ -1,0 +1,79 @@
+<div id="ic-layout-main">
+    <div class="container">
+        <div *ngFor="let alert of alerts">
+            <alert [type]="alert.type" [dismissOnTimeout]="alert.timeout">{{ alert.msg }}</alert>
+        </div>
+        <div class="ic-content-detail">
+
+            <div class="ic-content-body">
+
+                <div class="ic-entry-share">
+                    <!--<iframe [src]="shareFacebook()"-->
+                            <!--width="112" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0"-->
+                            <!--allowTransparency="true"></iframe>-->
+
+                    <ick-share [objectId]="feed?.body.id" [type]="feed?.body.type" html="<span>{{feed?.footer.share_count}}</span>"></ick-share>
+
+                    <time>{{news?.updatedAt | amTimeAgo}}</time>
+                </div>
+
+                <div class="ic-entry">
+                    <h1>{{news?.title}}</h1>
+
+                    <h2 class="ic-extract">{{news?.description}}</h2>
+
+                    <div class="entry" [innerHtml]="news?.content">
+
+                    </div>
+                </div>
+
+                <div class="ic-source">
+                    <p>Theo</p>
+                    <span>Báo Lá Cải - Vườn Chuối</span>
+                </div>
+
+                <div class="ic-entry-tags">
+                    <div class="ic-tag">
+                        Bài viết trong:
+                        <a href="#">Báo Lá cải</a>
+                    </div>
+
+                    <div class="ic-tag-others">
+                        Các kênh khác:
+                        <a href="#" class="ic-primary">Tin thị trường</a>
+                        <a href="#" class="ic-warning">Tin khuyến mại</a>
+                        <a href="#" class="ic-danger">Tin cộng đồng</a>
+                    </div>
+                </div>
+
+                <div class="ic-content-like-share">
+                    <a href="javascript:" class="{{is_like ? 'ic-icon-liked' : 'ic-icon-like'}}"
+                       (click)="like(is_like)">{{like_count}}</a>
+                    <!--Đã LIKE dùng <a href="#" class="ic-icon-like">231</a>-->
+                    <a href="javascript:" class="ic-icon-comment">{{feed?.footer.comment_count}}</a>
+
+                    <ick-report [objectId]="feed?.body.id" html="Báo cáo bài viết"></ick-report>
+
+                    <div class="ic-clear"></div>
+                </div>
+
+                <div class="ic-product-comments">
+
+                    <h4>Bình luận</h4>
+
+                    <sd-comments *ngIf="commentQuery" [query]="commentQuery"
+                                 [total]="feed.footer.comment_count"></sd-comments>
+                </div>
+            </div>
+
+
+            <div class="ic-content-right">
+
+
+            </div>
+
+            <div class="ic-clear"></div>
+        </div>
+
+    </div>
+</div>

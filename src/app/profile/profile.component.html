@@ -1,0 +1,267 @@
+
+<div id="ic-layout-main">
+    <div class="container"  *ngIf="user">
+
+        <div class="ic-profile-body">
+
+            <div class="ic-profile-cover" [ngStyle]="user.cover ? {'background-image': 'url(' + convertImage(user.cover) + ')','background-color':'#d2cccc'} : {'background-color':'#d2cccc'}">
+                <a title="Xem ảnh" href="#" class="ic-open-cover">Xem ảnh</a>
+
+                <div class="ic-avatar">
+                    <a href="#">
+                        <ick-avatar [owner]="user" width="40" height="40" class="img-circle"
+                                    [alt]="user.social_name"
+                                    [title]="user.social_name" size="thumb_medium"></ick-avatar>
+                    </a>
+                </div>
+
+                <div class="ic-profile-slogan">
+                    <div class="ic-rating-number">
+                        <img src="./assets/images/icon-user-lcc.png" alt="Rating 1" title="Ảnh Rating 1" />
+                        <img src="./assets/images/icon-user-lcc.png" alt="Rating 2" title="Ảnh Rating 2" />
+                        <img src="./assets/images/icon-user-lcc.png" alt="Rating 3" title="Ảnh Rating 3" />
+                        <img src="./assets/images/icon-user-lcc.png" alt="Rating 4" title="Ảnh Rating 4" />
+                        <img src="./assets/images/icon-user-lc.png" alt="Rating 5" title="Ảnh Rating 5" />
+                        <span>1.254 đánh giá tốt</span>
+                    </div>
+
+                    <p>Bạn mua xe Tesla vì lý do gì? Bởi nó có một bảng vẽ cảm ứng ...</p>
+                </div>
+            </div>
+
+            <div class="ic-profile-info">
+                <div class="ic-profile-a">
+                    <div class="row">
+                        <div class="col-xs-9">
+                            <h1>{{user.social_name}}</h1>
+
+                                <span class="ic-profile-top">
+                                    Người dùng đóng góp đáng tin cậy - xác nhận bởi iCheck
+                                </span>
+                        </div>
+
+                        <div class="col-xs-3">
+                            <div class="ic-profile-link">
+                                <a href="#" class="ic-icon-history">Lịch sử</a>
+                                <a href="#" class="ic-icon-share">Chia sẻ</a>
+                                <a href="#" class="ic-icon-facebook">Facebook</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ic-profile-b">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <p *ngIf="publicInfo && user.phone">{{user.phone}}</p>
+                            <p *ngIf="publicInfo && user.email">{{user.email}}</p>
+                        </div>
+
+                        <div class="col-xs-3">
+                            Bài viết của {{is_me ? 'bạn' : user.social_name}} <strong>{{user.post_count ? user.post_count : 'đang cập nhật'}}</strong>
+                        </div>
+
+                        <div class="col-xs-3">
+                            Đang theo dõi <strong>{{user.following_count}}</strong>
+                        </div>
+
+                        <div class="col-xs-3">
+                            Người theo dõi {{is_me ? 'bạn' : user.social_name}} <strong>{{user.follower_count}}</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ic-l">
+                <div class="ic-widget-plug">
+                    <strong>Recent</strong>
+                </div>
+
+                <div class="ic-widget">
+                    <div class="ic-widget-recent">
+                        <ul>
+                            <li class="ic-gc">
+                                <a href="#">iCheck</a> vừa dăng bài trong sản phẩm <strong>Vi sao lại thế 11</strong>
+                                <time>1 tiếng trước</time>
+                            </li>
+                            <li class="ic-gc">
+                                <a href="#">iCheck</a> vừa dăng bài trong sản phẩm <strong>Vi sao lại thế 321</strong>
+                                <time>1 tiếng trước</time>
+                            </li>
+                            <li class="ic-gc">
+                                <a href="#">iCheck</a> vừa xóa bài trong sản phẩm <strong>Vi sao lại thế 232</strong>
+                                <time>1 tiếng trước</time>
+                            </li>
+                            <li class="ic-gc">
+                                <a href="#">iCheck</a> vừa dăng bài trong sản phẩm <strong>Vi sao lại thế 2</strong>
+                                <time>1 tiếng trước</time>
+                            </li>
+                            <li class="ic-gc">
+                                <a href="#">iCheck</a> vừa dăng bài trong sản phẩm <strong>Vi sao lại thế 2</strong>
+                                <time>1 tiếng trước</time>
+                            </li>
+                        </ul>
+
+                        <div class="ic-more">
+                            <a href="#">Xem tất cả</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ic-r">
+                <div class="ic-widget-plug">
+                    <strong>Bài đã đăng</strong>
+                </div>
+                <div class="ic-widget">
+                    <div class="ic-widget-recent">
+                        <ul>
+                            <li class="ic-success">
+                                <a href="#">iCheck</a> vừa dăng bài trong sản phẩm <strong>Vi sao lại thế 11</strong>
+                                <time>1 tiếng trước</time>
+                            </li>
+                            <li class="ic-success">
+                                <a href="#">iCheck</a> vừa dăng bài trong sản phẩm <strong>Vi sao lại thế 321</strong>
+                                <time>1 tiếng trước</time>
+                            </li>
+                            <li class="ic-danger">
+                                <a href="#">iCheck</a> vừa xóa bài trong sản phẩm <strong>Vi sao lại thế 232</strong>
+                                <time>1 tiếng trước</time>
+                            </li>
+                            <li class="ic-success">
+                                <a href="#">iCheck</a> vừa dăng bài trong sản phẩm <strong>Vi sao lại thế 2</strong>
+                                <time>1 tiếng trước</time>
+                            </li>
+                            <li class="ic-warning">
+                                <a href="#">iCheck</a> vừa dăng bài trong sản phẩm <strong>Vi sao lại thế 2</strong>
+                                <time>1 tiếng trước</time>
+                            </li>
+                        </ul>
+
+                        <div class="ic-more">
+                            <a href="#">Xem tất cả</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ic-clear"></div>
+
+            <div class="ic-profile-gallery">
+
+                <h4>Bộ sưu tập của {{is_me ? 'bạn' : user.social_name}}</h4>
+
+                <div class="ic-profile-gallery-box">
+                    <div class="row">
+                        <div class="col-xs-6 col-md-3">
+                            <div class="ic-user-gallery">
+                                <a href="#">
+                                    <img src="images/q/b-1.jpg" alt="" title="" class="img-responsive"  />
+                                </a>
+                                <div class="ic-title">
+                                    <a href="#">Cô gái năm ấy chúng ta theo đuổi</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-6 col-md-3">
+                            <div class="ic-user-gallery">
+                                <a href="#">
+                                    <img src="images/q/b-1.jpg" alt="" title="" class="img-responsive" />
+                                </a>
+                                <div class="ic-title">
+                                    <a href="#">Cô gái năm ấy chúng ta theo đuổi</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-6 col-md-3">
+                            <div class="ic-user-gallery">
+                                <a href="#">
+                                    <img src="images/q/b-1.jpg" alt="" title="" class="img-responsive"  />
+                                </a>
+                                <div class="ic-title">
+                                    <a href="#">Cô gái năm ấy chúng ta theo đuổi</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-6 col-md-3">
+                            <div class="ic-user-gallery">
+                                <a href="#">
+                                    <img src="images/q/b-1.jpg" alt="" title="" class="img-responsive"  />
+                                </a>
+                                <div class="ic-title">
+                                    <a href="#">Cô gái năm ấy chúng ta theo đuổi</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="ic-profile-right">
+
+            <div class="ic-widget-plug-user" *ngIf="is_me">
+                <h4>iCheck Points</h4>
+                <a href="#" title="Trợ giúp">Trợ giúp</a>
+            </div>
+
+            <div class="ic-widget ic-widget-style" *ngIf="is_me">
+                <div class="ic-widget-points">
+                    <div class="ic-point-curr pull-left">
+                        Số Points hiện có <strong>{{user.point}}</strong>
+                    </div>
+
+                    <div class="pull-right">
+                        <a href="#">Thêm Point</a>
+                    </div>
+
+                    <div class="ic-clear"></div>
+
+                    <p>iCheck point có thể dùng để đổi coupon, thẻ điện thoại hoặc dùng để mua sản phẩm trên iCheck</p>
+                </div>
+
+                <div class="ic-widget-points-gen">
+                    <div class="pull-left">
+                        <a href="#">History</a>
+                    </div>
+
+                    <div class="pull-right">
+                        <a href="#">Quy đổi điểm</a>
+                    </div>
+
+                    <div class="ic-clear"></div>
+                </div>
+            </div>
+
+            <div class="ic-widget-no-border" *ngIf="following.length > 0">
+                <h4>Người {{is_me ? 'bạn' : user.social_name}} đã Follow</h4>
+
+                <ul>
+                    <li *ngFor="let fol of following">
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="javascript:" [routerLink]="[OpenLink('PROFILE',fol.icheck_id)]">
+                                    <ick-avatar [owner]="fol" width="40" height="40" class="media-object"
+                                                [alt]="fol.social_name"
+                                                [title]="fol.social_name" size="thumb_medium"></ick-avatar>
+                                </a>
+                            </div>
+
+                            <div class="media-body">
+                                <a href="javascript:" [routerLink]="[OpenLink('PROFILE',fol.icheck_id)]" class="ic-author">{{fol.social_name}}</a>
+                                <p>{{fol.follower_count}} người theo dõi</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="ic-clear"></div>
+
+    </div>
+</div>

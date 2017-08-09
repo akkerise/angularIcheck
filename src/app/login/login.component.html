@@ -1,0 +1,57 @@
+
+  <div class="ic-header-title">
+    <h3>Đăng nhập</h3>
+  </div>
+  <div class="ic-form-submit">
+
+    <div class="ic-login-as">
+      <h4>Đăng nhập bằng</h4>
+      <a class="ic-login-fb" (click)="authenticate('facebook')">Đăng nhập bằng Facebook</a>
+      <a class="ic-login-g" (click)="authenticate('google')">Đăng nhập bằng Google</a>
+    </div>
+    <form  (ngSubmit)="onSubmit()" #loginForm="ngForm">
+    <div class="ic-label-input">
+
+      <input class="form-control" type="text" value=""
+             name="username" #username="ngModel"
+             required minlength="4" maxlength="24"
+             [(ngModel)]="model.username"
+             placeholder="Tài khoản của bạn" />
+        <div *ngIf="username.errors && (username.dirty || username.touched)"
+             class="alert alert-danger">
+            <div [hidden]="!username.errors.required">
+                Username is required
+            </div>
+            <div [hidden]="!username.errors.minlength">
+                Username must be at least 4 characters long.
+            </div>
+            <div [hidden]="!username.errors.maxlength">
+                Username cannot be more than 24 characters long.
+            </div>
+        </div>
+    </div>
+
+    <div class="ic-label-input">
+      <input class="form-control" type="password" value=""
+             name="password" #password="ngModel"
+             required minlength="4"
+             [(ngModel)]="model.password"
+             placeholder="Mật khẩu của bạn" />
+        <div *ngIf="username.errors && (username.dirty || username.touched)"
+             class="alert alert-danger">
+            <div [hidden]="!password.errors.required">
+                Password is required
+            </div>
+            <div [hidden]="!password.errors.minlength">
+                Password must be at least 4 characters long.
+            </div>
+        </div>
+    </div>
+
+    <div class="ic-label-input text-center">
+      <input type="submit" name="submit" value="Đăng nhập" class="btn ic-btn-submit" [disabled]="!loginForm.form.valid"/>
+    </div>
+    </form>
+  </div>
+
+

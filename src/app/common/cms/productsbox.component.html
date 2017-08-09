@@ -1,0 +1,34 @@
+<div class="ic-product-cate">
+    <div class="container">
+        <div class="ic-home-title">
+            <h3>Top sản phẩm bị cộng đồng cảnh báo</h3>
+        </div>
+
+        <div class="ic-cate-paging">
+            <div class="ic-cate-paging-current">
+                {{currentIndex+1}}/{{maxPage}}
+            </div>
+
+            <a href="javascript:" (click)="previous()" class="ic-button ic-button-prev">Sau</a>
+            <a href="javascript:" (click)="next()" class="ic-button ic-button-next">Tiếp theo</a>
+        </div>
+
+        <div class="ic-home-products">
+            <div class="row">
+                    <ng-template ngFor let-item="$implicit" [ngForOf]="products[currentIndex]" let-i="index">
+                <div class="col-md-3">
+                        <ick-product [product]="item"></ick-product>
+                </div>
+                    </ng-template>
+            </div>
+        </div>
+
+        <div class="ic-home-more" *ngIf="data.query.category_id">
+            <a [routerLink]="[OpenLink('TOP_PRODUCT')]" [queryParams]="{type: data.query.type, categoryId: data.query.category_id }">Xem tất cả</a>
+        </div>
+
+        <div class="ic-home-more" *ngIf="!data.query.category_id">
+            <a [routerLink]="[OpenLink('TOP_PRODUCT')]" [queryParams]="{type: this.data.query.type }">Xem tất cả</a>
+        </div>
+    </div>
+</div>

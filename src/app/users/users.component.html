@@ -1,0 +1,16 @@
+
+<div class="ic-breadcrumb-line">
+    <a href="javascript:" [routerLink]="[OpenLink('TOP_GROUP')]" [routerLinkActive]="['current']">Các cộng đồng</a>
+    <a href="javascript:" [routerLink]="[OpenLink('TOP_USER')]" [routerLinkActive]="['current']">Người dùng</a>
+</div>
+
+<div class="ic-layout-nd">
+    <div class="container">
+        <div class="ic-nd-items">
+            <div class="ic-home-feedback-item" *ngFor="let user of users">
+                <ick-user [user]="user"></ick-user>
+            </div>
+            <div class="ic-clear"></div>
+        </div>
+    </div>
+</div>

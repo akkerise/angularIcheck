@@ -1,0 +1,33 @@
+<div class="ic-header-title">
+    <h3>Góp ý</h3>
+</div>
+
+<div class="ic-contact">
+
+    <p>{{ feedback_title }}</p>
+    <form #feedbackForm="ngForm" (ngSubmit)="onFeedbackSubmit()" method="POST">
+        <div class="ic-label-input">
+            <input required class="form-control" type="text" name="f_user_name" placeholder="Tên của bạn" [(ngModel)]="user.f_user_name" #f_user_name="ngModel" />
+            <span class="text-danger" *ngIf="f_user_name.errors && (f_user_name.dirty || f_user_name.touched)">Mời bạn nhập họ tên</span>
+        </div>
+
+        <div class="ic-label-input">
+            <input required class="form-control" type="text" name="f_phone_number" placeholder="Số điện thoại của bạn" [(ngModel)]="user.f_phone_number" #f_phone_number="ngModel" />
+            <span class="text-danger" *ngIf="f_phone_number.errors && (f_phone_number.dirty || f_phone_number.touched)">Mời nhập số điện thoại</span>
+        </div>
+
+        <div class="ic-label-input">
+            <input required class="form-control" type="text" name="f_email" placeholder="Email của bạn" [(ngModel)]="user.f_email" #f_email="ngModel" />
+            <span class="text-danger" *ngIf="f_email.errors && (f_email.dirty || f_email.touched)">Mời nhập email</span>
+        </div>
+
+        <div class="ic-label-input">
+            <textarea required class="form-control" cols="5" rows="5" name="f_message" placeholder="Nội dung của bạn" [(ngModel)]="user.f_message" #f_message="ngModel"></textarea>
+            <span class="text-danger" *ngIf="f_message.errors && (f_message.dirty || f_message.touched)">Mời nhập nội dung tin nhắn</span>
+        </div>
+
+        <div class="ic-label-input text-center">
+        <input type="submit" name="f_submit" value="Gửi thông tin" class="btn ic-btn-submit" [disabled]="!feedbackForm.form.valid" />
+        </div>
+    </form>
+</div>

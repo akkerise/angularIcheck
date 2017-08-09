@@ -1,0 +1,27 @@
+
+<ng-template ngFor let-item [ngForOf]="blocks" let-i="index">
+  <dynamic-component [componentData]="item"></dynamic-component>
+</ng-template>
+
+<div class="ic-product-cate">
+  <div class="container">
+    <div class="ic-home-title">
+      <h3>{{category?.name}}</h3>
+    </div>
+
+    <div class="ic-home-products" infinite-scroll
+         [infiniteScrollDistance]="1.5"
+         [infiniteScrollThrottle]="700"
+         (scrolled)="onScrollBrowser(categoryId)">
+      <div class="row">
+        <ng-template ngFor let-item="$implicit" [ngForOf]="products" let-i="index+1">
+          <div class="col-md-3">
+            <ick-product [product]="item"></ick-product>
+          </div>
+          <div class="ic-clear" *ngIf="chck(i)"></div>
+        </ng-template>
+
+      </div>
+    </div>
+  </div>
+</div>

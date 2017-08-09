@@ -1,0 +1,16 @@
+image: node:latest
+cache:
+  paths:
+   - node_modules/
+before_script:
+  - npm install -d
+  
+stages:
+  - build_test
+build_test:
+  stage: build_test
+  only:
+   - master
+  script:
+   - ng build --dev
+   - cp -R ./dist/. /data/icheck/www

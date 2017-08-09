@@ -1,0 +1,33 @@
+<div class="ic-header-title">
+    <h3>Đăng ký</h3>
+</div>
+<form  (ngSubmit)="onRegisterSubmit()" #registerForm="ngForm">
+<div class="ic-form-submit">
+
+    <div class="ic-label-input">
+        <input required class="form-control"
+               type="text" value="" name="username"
+               required minlength="4"
+               [(ngModel)]="model.username" placeholder="Tên đăng nhập của bạn" />
+    </div>
+
+    <div class="ic-label-input">
+        <input class="form-control"
+               type="text" value="" name="phone"
+               required minlength="8"
+               [(ngModel)]="model.phone" placeholder="Số điện thoại của bạn" />
+    </div>
+
+    <div class="ic-label-input">
+        <input class="form-control" type="text" value="" name="email" [(ngModel)]="model.email" placeholder="Email của bạn" />
+    </div>
+
+    <div class="ic-label-input">
+        <textarea required class="form-control" cols="5" rows="5" name="description" [(ngModel)]="model.description" placeholder="Nội dung của bạn"></textarea>
+    </div>
+
+    <div class="ic-label-input text-center">
+        <input type="submit" name="submit" value="Đăng ký" class="btn ic-btn-submit" />
+    </div>
+</div>
+</form>

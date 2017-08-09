@@ -1,0 +1,26 @@
+<div id="ic-layout-main">
+    <div class="container">
+
+        <div class="ic-header-name">
+            <h1>{{currentGroup?.name}}</h1>
+        </div>
+
+        <div class="ic-home-products" infinite-scroll
+             [infiniteScrollDistance]="1.5"
+             [infiniteScrollThrottle]="700"
+             (scrolled)="onScroll(groupId)">
+            <div class="row">
+                <ng-template ngFor let-item="$implicit" [ngForOf]="products" let-i="index+1">
+                    <div class="col-md-3">
+                        <ick-product [product]="item"></ick-product>
+                    </div>
+                    <div class="ic-clear" *ngIf="chck(i)"></div>
+                </ng-template>
+
+                <div class="ic-clear"></div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

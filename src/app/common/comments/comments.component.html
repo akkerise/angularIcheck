@@ -1,0 +1,50 @@
+
+<div class="ic-widget-comments-post" *ngIf="currentUser">
+    <form  (ngSubmit)="onSubmit()" #postForm="ngForm">
+        <div class="media">
+            <div class="media-left">
+                <a href="javascript:" [routerLink]="[OpenLink('PROFILE',currentUser.icheck_id)]">
+                    <ick-avatar [owner]="currentUser" width="40" height="40" class="ic-avatar"
+                                alt="{{currentUser?.social_name}}"
+                                title="{{currentUser?.social_name}}"></ick-avatar>
+                </a>
+            </div>
+            <div class="media-body">
+                <input placeholder="Bình luận của bạn" type="text" value=""
+                       name="content" #content="ngModel" [(ngModel)]="model.content"
+                       required />
+                <input type="button" (click)="onSubmit()" value="" name="" />
+            </div>
+        </div>
+    </form>
+</div>
+<div class="ic-widget-comments">
+
+    <div class="ic-widget-comment" *ngFor="let comment of comments">
+        <div class="media">
+            <div class="media-left">
+                <a href="javascript:" [routerLink]="[OpenLink('PROFILE',comment.owner.icheck_id)]">
+                    <ick-avatar [owner]="comment.owner" width="40" height="40" class="ic-avatar"
+                                alt="{{comment.owner.social_name}}"
+                                title="{{comment.owner.social_name}}" size="thumb_medium"></ick-avatar>
+                </a>
+            </div>
+
+            <div class="media-body">
+                <a href="javascript:" class="ic-name-author" [routerLink]="[OpenLink('PROFILE',comment.owner.icheck_id)]">
+                    {{comment.owner.social_name}}
+                </a>
+                {{comment.content}}
+
+                <div class="ic-widget-comment-tool">
+                    <a href="javascript:" (click)="like(comment)" class="{{comment.is_like ? 'ic-icon-liked' : 'ic-icon-like'}}">{{comment.like_count}}</a>
+                    <a href="javascript:" (click)="onReply(comment)" class="ic-icon-comment">{{comment.child_count}}</a>
+                </div>
+                <sd-comments *ngIf="subParam[comment.id] && !is_reply" [query]="subParam[comment.id]" [total]="comment.child_count" [is_reply]="true"></sd-comments>
+            </div>
+        </div>
+    </div>
+    <div class="ic-widget-comment-more" *ngIf="comments.length < total">
+        <a href="javascript:" (click)="onLoadMore()">Xem thêm {{total - comments.length >= query.limit ? query.limit : total - comments.length}} bình luận khác</a>
+    </div>
+</div>

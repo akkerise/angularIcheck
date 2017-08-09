@@ -1,0 +1,39 @@
+    <div class="ic-home-menu-top">
+        <div class="container">
+            <ul>
+                <li>
+                    <a href="javascript:" [routerLink]="[OpenLink('CATEGORIES')]" class="ic-icon-cate">Danh mục</a>
+                </li>
+                <li>
+                    <a href="javascript:" [routerLink]="[OpenLink('NEWS')]" class="ic-icon-news">
+                        Tin tức <span *ngIf="count.news">({{count.news}})</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:" [routerLink]="[OpenLink('TOP_PRODUCT')]" class="ic-icon-top">
+                        Top sản phẩm
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:" [routerLink]="[OpenLink('FOLLOW')]" class="ic-icon-feed">
+                        Feed <span *ngIf="count.feed">({{count.feed}})</span>
+                    </a>
+                </li>
+                <li *ngIf="currentUser">
+                    <a href="javascript:" [routerLink]="[OpenLink('PROFILE',currentUser.icheck_id)]" class="ic-icon-user">
+                        Cá nhân <span *ngIf="count.my_post">({{count.my_post}})</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:" [routerLink]="[OpenLink('CONTACT')]" class="ic-icon-contact">
+                        Liên hệ &amp; Góp ý
+                    </a>
+                </li>
+                <li class="ic-border">
+                    <a href="#" class="ic-icon-app">
+                        Cài đặt APP iCheck
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>

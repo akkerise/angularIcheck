@@ -1,0 +1,85 @@
+<div class="ic-widget-header">
+    <div class="media" *ngIf="feed.header">
+        <div class="media-left" *ngIf="feed.header.owner">
+            <a href="javascript:" [routerLink]="[OpenLink('PROFILE',feed.header.owner.icheck_id)]">
+                <ick-avatar [owner]="feed.header.owner" width="40" height="40" class="ic-avatar"
+                            alt="{{feed.header.owner.social_name}}"
+                            title="{{feed.header.owner.social_name}}" size="thumb_medium"></ick-avatar>
+            </a>
+        </div>
+
+        <div class="media-body" *ngIf="feed.header.owner">
+            <a href="javascript:" [routerLink]="[OpenLink('PROFILE',feed.header.owner.icheck_id)]"
+               class="ic-name-author">
+                {{feed.header.owner.social_name}}
+            </a>
+            <time>{{feed.created_at * 1000 | amTimeAgo}}</time>
+        </div>
+    </div>
+    <div class="ic-drop-select" *ngIf="feed.actions.length >= 1">
+        <a href="#" class="ic-open-menu">Chọn</a>
+        <ul *ngIf="feed.actions">
+            <ng-template ngFor let-action="$implicit" [ngForOf]="feed.actions" let-i="index">
+                <li *ngIf="action !== 'rep'">
+                    <a href="javascript:" (click)="actionFeed(action)">{{actionName(action)}}</a>
+                </li>
+                <li *ngIf="action == 'rep'">
+                    <ick-report [objectId]="feed?.body.id" html="{{actionName(action)}}"
+                                [type]="feed.body.type"></ick-report>
+                </li>
+            </ng-template>
+                <li *ngIf="!feed.body.post">
+                    <ick-share [objectId]="feed?.body.id" [type]="feed?.body.type" html="Chia sẻ"></ick-share>
+                </li>
+        </ul>
+    </div>
+</div>
+<div class="ic-widget-content" *ngIf="feed.body.attachments">
+    <ng-template ngFor let-attach="$implicit" [ngForOf]="feed.body.attachments" let-i="index">
+    <a *ngIf="attach.type=='link'" href="javascript:"></a>
+    <ick-img *ngIf="attach.type=='image'" src="{{attach.link}}" size="medium"></ick-img>
+    </ng-template>
+</div>
+<div class="ic-widget-content" *ngIf="feed.body.content">{{feed.body.content}}</div>
+
+<div class="ic-widget-news" *ngIf="feed.body.news">
+    <div class="ic-thumb">
+        <a href="javascript:" [routerLink]="[OpenLink('NEW_DETAIL',feed.body.id)]">
+            <ick-img alt="{{feed.body.news.title}}" class="img-responsive" src="{{feed.body.news.thumb}}"
+                     title="{{feed.body.news.title}}" size="thumb_medium"></ick-img>
+        </a>
+    </div>
+    <div class="ic-extract">
+        <h3>
+            <a href="javascript:" [routerLink]="[OpenLink('NEW_DETAIL',feed.body.id)]">{{feed.body.news.title}}</a>
+        </h3>
+
+        <p>{{feed.body.news.description}}</p>
+    </div>
+</div>
+
+<div class="ic-widget-product" *ngIf="feed.body.product">
+    <div class="media">
+        <div class="media-left">
+            <a href="javascript:" [routerLink]="[OpenLink('DETAIL',feed.body.product.id)]">
+                <ick-img src="{{feed.body.product.image_default}}" alt="{{feed.body.product.product_name}}"
+                         title="{{feed.body.product.product_name}}" width="50" size="small"></ick-img>
+            </a>
+        </div>
+
+        <div class="media-body">
+            <a href="javascript:" [routerLink]="[OpenLink('DETAIL',feed.body.product.id)]" class="ic-name-product">
+                {{feed.body.product.product_name}}
+            </a>
+        </div>
+    </div>
+
+    <div class="ic-price">
+        Giá tham khảo <span><ick-price [price]="feed.body.product.price_default"
+                                       [currency]="feed.body.product.currency_default"></ick-price></span>
+    </div>
+</div>
+<div class="ic-widget-post" *ngIf="feed.body.post" style="margin-left: 15px;padding:5px;">
+    <hr>
+    <feed-content [feed]="feed.body.post" [currentUser]="currentUser"></feed-content>
+</div>

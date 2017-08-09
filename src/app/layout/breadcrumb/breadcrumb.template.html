@@ -1,0 +1,22 @@
+    <div class="container" *ngIf="data.items.length > 0">
+
+        <div class="ic-breadcrumb">
+            <ol class="breadcrumb">
+                <li>
+                    <a routerLink="/home">
+                        <span>Trang chủ</span>
+                        <img itemprop="image" src="images/q/vi-du-ve-icon-1.png" alt="Trang chủ"/>
+                    </a>
+                    <meta itemprop="position" content="1"/>
+                </li>
+                <li *ngFor="let item of data.items;let i = index" class="active">
+                    <a routerLink="{{item.link}}">
+                        <span>{{item.name}}</span>
+                        <img src="images/q/vi-du-ve-icon-1.png" alt="Ô tô, xe máy  Phụ kiện"/>
+                    </a>
+
+                    <meta itemprop="position" content="2"/>
+                </li>
+            </ol>
+        </div>
+        </div>

@@ -1,0 +1,75 @@
+
+<div class="ic-contact">
+    <div class="ic-contact-box">
+
+        <h4>Hỏi đáp về sản phẩm</h4>
+
+        <div class="ic-contact-description">Viết thắc mắc về sản phẩm, nhà sản xuất, nơi bán ... của bạn và gửi cho chúng tôi</div>
+
+        <div class="row">
+            <div class="col-md-7">
+                <form #contactForm="ngForm" (ngSubmit)="onSubmit()" method="POST">
+                    <div class="ic-contact-input">
+                        <label>Họ và tên</label>
+                        <input required class="form-control" type="text" id="user_name" name="user_name" placeholder="Tên của bạn" [(ngModel)]="user.user_name" #user_name="ngModel" />
+                        <span class="text-danger" *ngIf="user_name?.errors && (user_name.dirty  || user_name.touched)">Mời bạn nhập họ tên</span>
+                    </div>
+
+                    <div class="ic-contact-input">
+                        <label>Số điện thoại</label>
+                        <input required class="form-control" type="text" id="phone_number" name="phone_number" placeholder="Số điện thoại của bạn" [(ngModel)]="user.phone_number" #phone_number="ngModel" number />
+                        <span class="text-danger" *ngIf="phone_number?.errors && (phone_number.dirty || phone_number.touched)">Mời nhập SĐT</span>
+                        <span class="text-danger" *ngIf="phone_number?.errors?.number">Số điện thoại không hợp lệ</span>
+                    </div>
+
+                    <div class="ic-contact-input">
+                        <label>Email</label>
+                        <input required class="form-control" type="email" id="email" name="email" placeholder="Email của bạn" [(ngModel)]="user.email" #email="ngModel" email />
+                        <span class="text-danger" *ngIf="email?.errors && (email.dirty || email.touched)">Vui lòng nhập email</span>
+                        <span class="text-danger" *ngIf="email?.errors?.email">Email không đúng định dạng</span>
+                    </div>
+
+                    <div class="ic-contact-input">
+                        <label>Tiêu đề</label>
+                        <input required class="form-control" type="text" id="title" name="title" placeholder="Tiêu đề" [(ngModel)]="user.title" #title="ngModel" />
+                        <span class="text-danger" *ngIf="title?.errors && (title.dirty || title.touched)">Vui lòng nhập tiêu đề</span>
+                    </div>
+
+                    <div class="ic-contact-input">
+                        <label>Nội dung</label>
+                        <textarea required class="form-control" cols="5" rows="5" id="message" name="message" placeholder="Nội dung của bạn" [(ngModel)]="user.message" #message="ngModel"></textarea>
+                        <span class="text-danger" *ngIf="message?.errors && (message.dirty || message.touched)">Vui lòng nhập nội dung tin nhắn</span><!-- /.text-danger -->
+                    </div>
+
+                    <div class="ic-clear"></div>
+
+                    <input type="submit" name="submit" value="Gửi thông tin" class="btn ic-btn-submit" [disabled]="!contactForm.form.valid" />
+                </form>
+            </div>
+
+            <div class="col-md-5">
+                <div class="ic-company">
+                    <p><strong>Công ty cổ phẩn iCheck</strong></p>
+                    <p>Chuyên cung cấp dịch vụ ...</p>
+                    <address>Địa chỉ: Hoàng Đạo Thúy , Hà Nội</address>
+                    <p><span>Fax:</span> +00.200.000.000</p>
+                    <p><span>Mobile:</span> +00.200.000.000</p>
+                    <p><span>Phone:</span> +00.200.000.000</p>
+                </div>
+
+                <div class="ic-company ic-company-line">
+                    <p><strong>Văn phòng Hồ Chí Minh</strong></p>
+                    <p>Chuyên cung cấp dịch vụ ...</p>
+                    <address>Địa chỉ: Hoàng Đạo Thúy , Hà Nội</address>
+                    <p><span>Fax:</span> +00.200.000.000</p>
+                    <p><span>Mobile:</span> +00.200.000.000</p>
+                    <p><span>Phone:</span> +00.200.000.000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>

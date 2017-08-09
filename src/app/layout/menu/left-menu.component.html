@@ -1,0 +1,40 @@
+
+    <div class="ic-menu">
+        <ul>
+            <li class="lv-1" [routerLinkActive]="['current']">
+                <a [routerLink]="[OpenLink('HOME')]" class="lv-a1 ">Trang chủ</a>
+                <ul>
+                    <li>
+                        <a href="#">Tải App</a>
+                    </li>
+                    <li>
+                        <a href="#">Tin tức</a>
+                    </li>
+                    <li>
+                        <a href="#">Top HOT</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="lv-1" [routerLinkActive]="['current']">
+                <a href="javascript:" [routerLink]="[OpenLink('FOLLOW')]" class="lv-a1 lv-a1-follow">Follow</a>
+            </li>
+
+            <li class="lv-1" [routerLinkActive]="['current']">
+                <a [routerLink]="[OpenLink('CATEGORIES')]" class="lv-a1 lv-a1-cate">Danh mục</a>
+                <ul *ngIf="categories | async">
+                    <li *ngFor="let cate of categories | async" [routerLinkActive]="['current']">
+                        <a href="javascript:" [routerLink]="[OpenLink('BROWSER',cate.id)]">{{cate.name}}</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="lv-1">
+                <a href="ca_nhan.html" class="lv-a1 lv-a1-user">Cá nhân</a>
+            </li>
+
+            <li class="lv-1"  [routerLinkActive]="['current']">
+                <a [routerLink]="[OpenLink('CONTACT')]"  class="lv-a1 lv-a1-contact">Liên hệ &amp; Góp ý</a>
+            </li>
+        </ul>
+    </div>

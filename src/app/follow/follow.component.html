@@ -1,0 +1,75 @@
+<div id="ic-layout-main" class="ic-feed">
+    <div class="container">
+        <div class="col col-1">
+
+            <div class="ic-notice-download">
+                Dùng ứng dụng iCheck trên smartphone để quét sản phẩm cũng như đánh giá trực tiếp <a href="">Tải ngay</a>
+            </div>
+
+            <div class="ic-post-status">
+                <form  (ngSubmit)="onSubmit()" #postForm="ngForm">
+                    <a class="ic-avatar">
+                        <ick-img src="{{currentUser?.avatar}}" title="{{currentUser?.social_name}}'s avatar" alt="{{currentUser?.social_name}}'s avatar"></ick-img>
+                    </a>
+
+                    <input class="ic-text" placeholder="Loại ngước ngọt đóng chai bạn uống gần đây nhất nó như thế nào ?" type="text" value=""
+                           name="content" #content="ngModel" autocomplete="off" [(ngModel)]="model.content"
+                           required />
+
+
+                    <img *ngIf="url" [src]="url"/>
+                    <div class="ic-add-image">
+                        <label for="file-upload">
+                            Custom Upload
+                        </label>
+                        <input type="file" name="files" id="file-upload"  (change)="readUrl($event)"/>
+                    </div>
+                    <!--<input type="submit" name="submit" value="Đăng" class="btn ic-btn-submit"/>-->
+                </form>
+            </div>
+            <div id="ic-feed-col" class="ic-feed-col" infinite-scroll
+                 [infiniteScrollDistance]="2"
+                 [infiniteScrollThrottle]="1000"
+                 (scrolled)="onScrollFeed()">
+                <div class="ic-feed-c1">
+
+                    <ng-template ngFor let-item="$implicit" [ngForOf]="showArray[0]" let-i="index">
+                        <sd-feed [feed]="item"></sd-feed>
+                    </ng-template>
+                </div>
+
+                <div class="ic-feed-c2">
+                    <ng-template ngFor let-item="$implicit" [ngForOf]="showArray[1]" let-i="index">
+                        <sd-feed [feed]="item"></sd-feed>
+                    </ng-template>
+                </div>
+
+                <div class="ic-clear"></div>
+            </div>
+
+        </div>
+
+        <div class="col col-2">
+            <div class="ic-widget-title">
+                <h4>Các nhóm dành cho bạn</h4>
+            </div>
+
+            <div class="ic-home-follow-item" *ngFor="let grp of groups">
+                <ick-group [group]="grp"></ick-group>
+            </div>
+
+
+            <div class="ic-widget-title">
+                <h4>Người dùng tích cực</h4>
+            </div>
+
+            <div class="ic-home-feedback-item" *ngFor="let user of users">
+                <ick-user [user]="user"></ick-user>
+            </div>
+
+
+        </div>
+
+        <div class="ic-clear"></div>
+    </div>
+</div>

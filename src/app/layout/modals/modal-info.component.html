@@ -1,0 +1,17 @@
+<div bsModal #smModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" [attr.aria-labelledby]="'infoModal'+objectId" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title pull-left">Thông báo</h4>
+                <button type="button" class="close pull-right" aria-label="Close" (click)="smModal.hide()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li *ngFor="let alr of messages">{{alr.text}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

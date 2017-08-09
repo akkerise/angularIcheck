@@ -1,0 +1,19 @@
+<feed-title [feed]="feed" [currentUser]="currentUser"></feed-title>
+<div class="ic-widget">
+    <feed-content [feed]="feed" [currentUser]="currentUser"></feed-content>
+    <div class="ic-widget-like-share" *ngIf="feed.footer">
+        <a href="javascript:" (click)="like(feed.footer.is_like)"
+           class="{{is_like ? 'ic-icon-liked' : 'ic-icon-like'}}">{{like_count}}</a>
+        <a href="javascript:" (click)="comment()" class="ic-icon-comment">{{feed.footer.comment_count}}</a>
+    </div>
+
+    <div class="ic-widget-footer" *ngIf="commentQuery || feed.footer.like_count">
+        <div class="ic-widget-footer-liked" *ngIf="feed.footer.like_count > 0">
+            <a data-toggle="tooltip" data-html="true" on-mouseover='listLikes($event)' rel="{{feed.body.id}}" title="">{{like_users(feed.footer.like_users)}}</a>
+        </div>
+
+
+        <sd-comments *ngIf="commentQuery" [query]="commentQuery" [total]="feed.footer.comment_count"></sd-comments>
+    </div>
+
+</div>

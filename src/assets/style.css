@@ -1,0 +1,549 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  background: #fff;
+  color: #333; }
+
+ul {
+  padding: 0;
+  margin: 0; }
+  ul li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; }
+
+a {
+  color: #333; }
+  a:hover {
+    text-decoration: none; }
+  a:focus {
+    text-decoration: none; }
+  a.ic-button {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url("images/icon-back.png") no-repeat;
+    background-size: contain;
+    top: -35px;
+    display: block;
+    text-indent: -9999px; }
+  a.ic-button-back {
+    right: 30px; }
+  a.ic-button-next {
+    right: 0;
+    background-image: url("images/icon-next.png"); }
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0; }
+
+input.ic-form-input {
+  border: #111;
+  width: 300px;
+  padding: 5px; }
+
+input.ic-form-button {
+  border: 0;
+  background: url("images/icon-search.gif") no-repeat;
+  width: 16px;
+  height: 20px; }
+
+input.ic-btn-submit {
+  background: #22b38e;
+  color: #fff; }
+
+.form-control:focus {
+  border-color: #22b38e; }
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border: 0; }
+
+.navbar-default {
+  background: #111;
+  border-bottom: 0; }
+
+.navbar-default .navbar-brand {
+  background: url("images/logo.png") no-repeat;
+  width: 110px;
+  height: 40px;
+  text-indent: -999px;
+  background-size: contain;
+  display: inline-block;
+  margin: 5px 0 0; }
+
+.navbar > .container .navbar-brand,
+.navbar > .container-fluid .navbar-brand {
+  margin-left: 0; }
+
+.navbar-default .navbar-nav > li > a {
+  color: #fff; }
+
+.navbar-default .navbar-nav > li > a:hover {
+  background: #22b38e;
+  color: #fff; }
+
+.ic-form-search {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background: #fff;
+  padding: 0 10px;
+  margin: 3px 0 0; }
+
+.ic-header {
+  height: 45px;
+  background: #000; }
+
+.ic-main {
+  padding: 70px 0 0; }
+
+.ic-menu {
+  border: #dedede 1px solid;
+  padding: 1px; }
+  .ic-menu ul li.lv-1 ul {
+    display: none; }
+  .ic-menu ul li li {
+    border-top: #dedede 1px dotted; }
+    .ic-menu ul li li a {
+      display: block;
+      padding: 7px 10px 7px 20px;
+      color: #333;
+      background: url("images/icon-ar.gif") no-repeat 10px center; }
+  .ic-menu ul li a.lv-a1 {
+    display: block;
+    padding: 7px 10px;
+    border-top: #dedede 1px dotted;
+    color: #333;
+    font-weight: bold; }
+    .ic-menu ul li a.lv-a1:hover {
+      background: #22b38e;
+      color: #fff; }
+  .ic-menu ul li.current a.lv-a1 {
+    background: #22b38e;
+    color: #fff; }
+  .ic-menu ul li.current ul {
+    display: block; }
+
+.ic-margin-b15 {
+  margin-bottom: 15px; }
+
+.ic-app {
+  margin: 0 0 15px; }
+  .ic-app p {
+    padding: 0;
+    margin: 0 0 15px; }
+
+.ic-app-download a {
+  display: block;
+  width: 50%;
+  float: left;
+  background: url("images/app-store.png") no-repeat;
+  height: 25px;
+  background-size: contain;
+  margin: 0 0 10px;
+  padding: 5px 0 0;
+  color: #333; }
+  .ic-app-download a span {
+    padding-left: 40px; }
+  .ic-app-download a.ic-google-play {
+    background-image: url("images/google-play.png"); }
+  .ic-app-download a.ic-windows-phone {
+    background-image: url("images/windown-phone.png"); }
+  .ic-app-download a.ic-blackBerry-world {
+    background-image: url("images/blackberry-world.png"); }
+
+.ic-qc {
+  margin-bottom: 15px; }
+
+.ic-qc-prom a {
+  display: block;
+  margin: 0 0 15px; }
+
+.ic-news-slider {
+  position: relative; }
+  .ic-news-slider .ic-header-title {
+    margin: 0 0 15px; }
+
+.ic-news {
+  height: 110px; }
+  .ic-news .ic-thumb {
+    margin: 0 0 10px; }
+  .ic-news .ic-thumb-2 {
+    margin: 0 15px 0 0;
+    width: 132px;
+    height: 102px;
+    float: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border: #efefef 1px solid; }
+    .ic-news .ic-thumb-2 img {
+      display: none; }
+    .ic-news .ic-thumb-2 a {
+      width: 130px;
+      height: 100px;
+      display: block; }
+  .ic-news h2 {
+    font-size: 1em;
+    line-height: 1.4em; }
+    .ic-news h2 a {
+      font-weight: bold;
+      font-size: 1em;
+      color: #333; }
+      .ic-news h2 a:hover {
+        color: #22b38e; }
+
+.ic-products {
+  border: #dedede 1px solid;
+  padding: 10px;
+  margin: 0 0 15px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; }
+
+.ic-header-title {
+  min-height: 35px; }
+  .ic-header-title h3 {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 1.2em;
+    display: inline-block;
+    padding: 0 0 5px;
+    color: #333;
+    border-bottom: #22b38e 2px solid;
+    text-transform: uppercase;
+    float: left; }
+  .ic-header-title h1 {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 1.2em;
+    display: inline-block;
+    padding: 0 0 5px;
+    color: #333;
+    border-bottom: #22b38e 2px solid;
+    text-transform: uppercase;
+    float: left; }
+  .ic-header-title .ic-fit {
+    float: right; }
+
+.ic-product-detail h1 {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 2.4em;
+  margin: 0 0 5px; }
+
+.ic-product-detail p {
+  padding: 0 0 5px; }
+
+.ic-product-detail span.ic-price {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #22b38e; }
+
+.ic-product-detail a {
+  color: #22b38e; }
+
+.ic-comments {
+  padding: 10px;
+  border: #efefef 1px solid;
+  margin: 0 0 15px; }
+
+.ic-comment {
+  border-top: 1px solid #efefef;
+  padding: 10px 0; }
+  .ic-comment.first-child {
+    border-top: 0; }
+  .ic-comment img {
+    width: 40px;
+    height: 40px; }
+  .ic-comment time {
+    margin-right: 10px;
+    font-size: 0.9em;
+    color: #ccc; }
+  .ic-comment .ic-comment-cc {
+    margin: 5px 0 0;
+    clear: both;
+    color: #333; }
+  .ic-comment .ic-comment-info {
+    color: #ccc;
+    padding: 10px 0 0;
+    font-size: 0.9em; }
+    .ic-comment .ic-comment-info a {
+      color: #22b38e;
+      padding-left: 10px;
+      padding-right: 10px; }
+
+.ic-comment-no {
+  border-top: 0; }
+
+.ic-product-check-fake p {
+  margin: 0 0 10px; }
+
+.ic-product {
+  position: relative;
+  padding: 10px 0; }
+  .ic-product .ic-thumb {
+    text-align: center;
+    margin: 0 0 10px; }
+    .ic-product .ic-thumb img {
+      width: 175px;
+      height: 175px; }
+  .ic-product .ic-price {
+    color: #22b38e;
+    font-size: 1.3em;
+    font-family: 'Roboto', Arial, sans-serif; }
+  .ic-product h2 {
+    font-size: 1em;
+    line-height: 1.4em; }
+    .ic-product h2 a {
+      font-weight: bold;
+      font-size: 1em;
+      color: #333; }
+      .ic-product h2 a:hover {
+        color: #22b38e; }
+  .ic-product span {
+    width: 20px;
+    height: 20px;
+    background: url("images/ic-1.png");
+    position: absolute;
+    background-size: cover;
+    right: 10px;
+    top: 10px;
+    z-index: 10; }
+    .ic-product span.ic-danger {
+      background-image: url("images/ic-2.png"); }
+    .ic-product span.ic-warning {
+      background-image: url("images/ic-3.png"); }
+
+.ic-product-gallerys {
+  text-align: center;
+  margin: 10px 0; }
+  .ic-product-gallerys a {
+    display: inline-block;
+    margin-right: 10px;
+    border: #dedede 1px solid;
+    height: 44px;
+    width: 44px;
+    padding: 1px; }
+    .ic-product-gallerys a img {
+      width: 40px;
+      height: 40px; }
+    .ic-product-gallerys a:hover {
+      border-color: #22b38e; }
+
+.ic-product-act {
+  margin: 0 0 15px; }
+
+.ic-product-cat .ic-thumb {
+  text-align: center;
+  padding: 20px 0 0; }
+
+.ic-product-cat a.ic-title {
+  display: block;
+  margin: 5px 10px 20px;
+  color: #333;
+  text-align: center; }
+
+.ic-form-submit {
+  margin: 0 0 15px;
+  border: #efefef 1px solid;
+  padding: 10px;
+  margin: 0 0 15px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; }
+  .ic-form-submit p {
+    margin: 10px 0 15px; }
+  .ic-form-submit .ic-label-input {
+    width: 70%;
+    margin: 0 auto 15px; }
+
+.ic-login-as {
+  text-align: center;
+  margin: 0 0 15px; }
+  .ic-login-as h4 {
+    font-size: 1em;
+    text-align: center;
+    margin: 0 0 10px;
+    font-weight: bold; }
+  .ic-login-as a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: url("images/icon-fb.png") no-repeat;
+    background-size: 40px 40px;
+    text-indent: -99999px;
+    margin-: 0 10px; }
+    .ic-login-as a.ic-login-g {
+      background-image: url("images/icon-google.png"); }
+
+.ic-contact {
+  margin: 0 0 15px;
+  border: #efefef 1px solid;
+  padding: 10px;
+  margin: 0 0 15px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; }
+  .ic-contact p {
+    margin: 10px 0 15px; }
+  .ic-contact .ic-label-input {
+    width: 70%;
+    margin: 0 auto 15px; }
+
+.ic-enterprise {
+  padding: 15px 0; }
+  .ic-enterprise .ic-label-input {
+    margin-bottom: 15px; }
+
+.ic-profile {
+  margin: 0 0 15px; }
+  .ic-profile p {
+    margin: 0 0 5px; }
+  .ic-profile strong.ic-name {
+    color: #22b38e;
+    font-size: 1.5em;
+    font-family: 'Roboto', Arial, sans-serif; }
+
+.ic-activity-box {
+  border: #dfdfdf 1px solid;
+  padding: 10px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  margin: 0 0 15px;
+  height: 330px;
+  overflow: hidden; }
+
+.ic-act {
+  padding: 5px 0; }
+  .ic-act .media {
+    margin-top: 0; }
+  .ic-act img {
+    width: 50px;
+    height: 50px; }
+  .ic-act a {
+    color: #22b38e; }
+
+.ic-point {
+  text-align: center;
+  border: #dfdfdf 1px solid;
+  padding: 10px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; }
+  .ic-point span {
+    display: block;
+    color: #22b38e;
+    text-align: center;
+    font-size: 2.5em;
+    font-family: 'Roboto', Arial, sans-serif; }
+  .ic-point a {
+    margin-left: 10px;
+    margin-right: 10px; }
+
+.ic-follow img.img-circle {
+  margin: 0 auto;
+  display: block; }
+
+.ic-follow a.ic-title {
+  display: block;
+  text-align: center;
+  margin: 10px 0 0; }
+
+.ic-more {
+  text-align: right;
+  padding: 10px 0 5px; }
+  .ic-more a {
+    color: #22b38e;
+    text-decoration: underline; }
+
+.ic-follow-widget {
+  border: #efefef 1px solid;
+  padding: 10px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  height: 200px;
+  margin: 0 0 15px; }
+  .ic-follow-widget a.ic-title2 {
+    font-size: 1.3em;
+    font-family: 'Roboto', Arial, sans-serif;
+    display: block;
+    color: #22b38e;
+    margin: 0 0 5px; }
+
+.ic-404 {
+  background: url("images/error-page.jpg") no-repeat center top;
+  min-height: 270px;
+  margin: 15px 0;
+  padding: 270px 0 0;
+  text-align: center; }
+  .ic-404 h4 {
+    font-size: 2.5em;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #999;
+    margin: 15px 0 10px; }
+  .ic-404 a {
+    color: #22b38e;
+    text-decoration: underline; }
+    .ic-404 a:hover {
+      text-decoration: none; }
+
+.ic-product-description {
+  margin: 0 0 10px; }
+
+.ic-product-rating {
+  margin: 0 0 10px; }
+
+.ic-footer {
+  background: #efefef;
+  padding: 15px 0;
+  margin: 15px 0 0; }
+  .ic-footer h4 {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+    color: #333;
+    font-weight: 500; }
+  .ic-footer a {
+    color: #333;
+    font-size: 0.9em; }
+  .ic-footer ul li {
+    padding: 3px 0; }
+  .ic-footer address {
+    font-size: 0.9em;
+    background: url("images/icon-map-point.png") no-repeat left 2px;
+    padding: 0 0 0 20px; }
+
+.ic-footer-download {
+  margin: 0 0 15px; }
+  .ic-footer-download a {
+    display: inline-block;
+    background: url("images/app-store.png") no-repeat;
+    width: 20px;
+    height: 25px;
+    text-indent: -9999px;
+    background-size: contain;
+    margin-right: 10px; }
+    .ic-footer-download a.ic-google-play {
+      background-image: url("images/google-play.png");
+      width: 22px; }
+    .ic-footer-download a.ic-windows-phone {
+      background-image: url("images/windown-phone.png");
+      width: 25px; }
+    .ic-footer-download a.ic-blackBerry-world {
+      background-image: url("images/blackberry-world.png");
+      width: 33px; }
+
+.ic-copyright {
+  height: 35px;
+  line-height: 35px;
+  background: #22b38e;
+  color: #fff;
+  font-size: 0.9em; }

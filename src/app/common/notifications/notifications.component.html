@@ -1,0 +1,22 @@
+<ul style="max-height: 300px;overflow-y: scroll;">
+    <li class="ic-notification-img" *ngFor="let notif of notifications"
+        [ngStyle]="checkRead(is_read[notif.id] ? is_read[notif.id] : notif.is_read)">
+        <div class="ic-thumb" *ngIf="notif.image">
+            <a>
+                <ick-img [src]="notif.image.link" width="27" height="27" [type]="notif.image.type"></ick-img>
+            </a>
+        </div>
+        <a *ngFor="let actor of notif.actors;let i = index" href="javascript:" [routerLink]="[OpenLinkType('user',actor.id)]">
+            <strong class="ic-s1">
+                {{actor.name}}
+            </strong>{{i < notif.actors.length-1 ? (i == notif.actors.length-2 ? ' và ' : ', ') : ''}}
+        </a>
+        <a href="javascript:" (click)="read(notif)" [routerLink]="[OpenLinkType(notif.target.type,notif.target.id)]">
+            đã {{actionName(notif.action)}} {{objectAction(notif.target.type,notif.target,notif.target.name).type}}
+            <strong>{{objectAction(notif.target.type,notif.target,notif.target.name).name}}</strong>
+        </a>
+
+        <div style="float: right" *ngIf="checkRead(is_read[notif.id] ? is_read[notif.id] : notif.is_read)">đã xem</div>
+        <time>{{notif.created_at | amTimeAgo}}</time>
+    </li>
+</ul>

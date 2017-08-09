@@ -1,0 +1,706 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Danh mục sản phẩm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" />
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="style.css?ver=1.1" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js?ver=3.3.7"></script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script type="text/javascript" src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div id="ic-layout">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="home.html">iCheck</a>
+            </div>
+
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="dang_bai.html">Đăng bài</a></li>
+                    <li><a href="dang_nhap.html">Đăng nhập</a></li>
+                </ul>
+
+                <form class="navbar-form navbar-right">
+                    <div class="ic-form-search">
+                        <input type="text" class="ic-form-input" placeholder="Vui lòng nhập tên sản phẩm bạn muốn tra cứu" />
+                        <input type="submit" name="submit" class="ic-form-button" value="" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="ic-main" id="ic-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="ic-menu">
+                        <ul>
+                            <li class="lv-1">
+                                <a href="home.html" class="lv-a1 ">Trang chủ</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">Tải App</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Tin tức</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Top HOT</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="lv-1">
+                                <a href="follow.html" class="lv-a1">Follow</a>
+                            </li>
+
+                            <li class="lv-1 current">
+                                <a href="danh_muc.html" class="lv-a1">Danh mục</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">Bộ sưu tập</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Danh  mục</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="lv-1">
+                                <a href="ca_nhan.html" class="lv-a1">Cá nhân</a>
+                            </li>
+
+                            <li class="lv-1">
+                                <a href="lien_he_gop_y.html" class="lv-a1">Liên hệ &amp; Góp ý</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-10">
+
+                    <div class="ic-breadcrumb">
+                        <ol class="breadcrumb">
+                            <li><a href="home.html">Trang chủ</a></li>
+                            <li class="active">Ô tô, xe máy & Phụ kiện</li>
+                        </ol>
+                    </div>
+
+                    <div class="ic-product-cat">
+                        <div class="ic-header-title">
+                            <h3>Danh mục sản phẩm</h3>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-3 col-xs-4 ic-product-cate">
+                                <div class="ic-thumb">
+                                    <a href="#">
+                                        <img src="images/q/c-1.jpg" alt="" title="" />
+                                    </a>
+                                </div>
+
+                                <a href="#" class="ic-title">Danh mục 1</a>
+                            </div>
+
+                            <div class="col-md-3 col-xs-4 ic-product-cate">
+                                <div class="ic-thumb">
+                                    <a href="#">
+                                        <img src="images/q/c-2.png" alt="" title="" />
+                                    </a>
+                                </div>
+
+                                <a href="#" class="ic-title">Danh mục 2</a>
+                            </div>
+
+                            <div class="col-md-3 col-xs-4 ic-product-cate">
+                                <div class="ic-thumb">
+                                    <a href="#">
+                                        <img src="images/q/c-3.jpg" alt="" title="" />
+                                    </a>
+                                </div>
+
+                                <a href="#" class="ic-title">Danh mục 3</a>
+                            </div>
+
+                            <div class="col-md-3 col-xs-4 ic-product-cate">
+                                <div class="ic-thumb">
+                                    <a href="#">
+                                        <img src="images/q/c-4.png" alt="" title="" />
+                                    </a>
+                                </div>
+
+                                <a href="#" class="ic-title">Danh mục 4</a>
+                            </div>
+
+                            <div class="col-md-3 col-xs-4 ic-product-cate">
+                                <div class="ic-thumb">
+                                    <a href="#">
+                                        <img src="images/q/c-5.png" alt="" title="" />
+                                    </a>
+                                </div>
+
+                                <a href="#" class="ic-title">Danh mục 5</a>
+                            </div>
+
+                            <div class="col-md-3 col-xs-4 ic-product-cate">
+                                <div class="ic-thumb">
+                                    <a href="#">
+                                        <img src="images/q/c-6.jpg" alt="" title="" />
+                                    </a>
+                                </div>
+
+                                <a href="#" class="ic-title">Danh mục 6</a>
+                            </div>
+
+                            <div class="col-md-3 col-xs-4 ic-product-cate">
+                                <div class="ic-thumb">
+                                    <a href="#">
+                                        <img src="images/q/c-7.jpg" alt="" title="" />
+                                    </a>
+                                </div>
+
+                                <a href="#" class="ic-title">Danh mục 7</a>
+                            </div>
+
+                            <div class="col-md-3 col-xs-4 ic-product-cate">
+                                <div class="ic-thumb">
+                                    <a href="#">
+                                        <img src="images/q/c-8.jpg" alt="" title="" />
+                                    </a>
+                                </div>
+
+                                <a href="#" class="ic-title">Danh mục 8</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ic-products">
+                        <div class="ic-header-title">
+                            <h3>TOP sản phẩm cộng đồng khuyên dùng</h3>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3 col-xs-6">
+                                <div class="ic-product">
+                                    <div class="ic-thumb">
+                                        <a href="san_pham_chi_tiet.html">
+                                            <img src="images/q/p-1.jpg" alt="" title="" />
+                                        </a>
+                                    </div>
+
+                                    <h2>
+                                        <a href="san_pham_chi_tiet.html">Combo Chăm Sóc Tóc Tresemme Keratin Smooth...</a>
+                                    </h2>
+
+                                    <div class="ic-price">
+                                        100.000đ
+                                    </div>
+
+                                    <span class="ic-success"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-xs-6">
+                                <div class="ic-product">
+                                    <div class="ic-thumb">
+                                        <a href="san_pham_chi_tiet.html">
+                                            <img src="images/q/p-2.jpg" alt="" title="" />
+                                        </a>
+                                    </div>
+
+                                    <h2>
+                                        <a href="san_pham_chi_tiet.html">Nước Giặt Dịu Nhẹ Omo Chai 2,4Kg</a>
+                                    </h2>
+
+                                    <div class="ic-price">
+                                        Đang cập nhật
+                                    </div>
+
+                                    <span class="ic-success"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-xs-6">
+                                <div class="ic-product">
+                                    <div class="ic-thumb">
+                                        <a href="san_pham_chi_tiet.html">
+                                            <img src="images/q/p-9.jpg" alt="" title="" />
+                                        </a>
+                                    </div>
+
+                                    <h2>
+                                        <a href="san_pham_chi_tiet.html">Kem Đánh Răng P/S Trà Xanh 200g</a>
+                                    </h2>
+
+                                    <div class="ic-price">
+                                        10.000đ
+                                    </div>
+
+                                    <span class="ic-success"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-xs-6">
+                                <div class="ic-product">
+                                    <div class="ic-thumb">
+                                        <a href="san_pham_chi_tiet.html">
+                                            <img src="images/q/p-4.jpg" alt="" title="" />
+                                        </a>
+                                    </div>
+
+                                    <h2>
+                                        <a href="san_pham_chi_tiet.html">Mô Hình LEGO Ninjago - Đảo Nhện Độc 70604</a>
+                                    </h2>
+
+                                    <div class="ic-price">
+                                        550.000đ
+                                    </div>
+
+                                    <span class="ic-success"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ic-products">
+                        <div class="ic-header-title">
+                            <h3>TOP sản phẩm bị cộng đồng cảnh báo</h3>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3 col-xs-6">
+                                <div class="ic-product">
+                                    <div class="ic-thumb">
+                                        <a href="san_pham_chi_tiet.html">
+                                            <img src="images/q/p-1.jpg" alt="" title="" />
+                                        </a>
+                                    </div>
+
+                                    <h2>
+                                        <a href="san_pham_chi_tiet.html">Combo Chăm Sóc Tóc Tresemme Keratin Smooth...</a>
+                                    </h2>
+
+                                    <div class="ic-price">
+                                        100.000đ
+                                    </div>
+
+                                    <span class="ic-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-xs-6">
+                                <div class="ic-product">
+                                    <div class="ic-thumb">
+                                        <a href="san_pham_chi_tiet.html">
+                                            <img src="images/q/p-7.jpg" alt="" title="" />
+                                        </a>
+                                    </div>
+
+                                    <h2>
+                                        <a href="san_pham_chi_tiet.html">Nước Giặt Dịu Nhẹ Omo Chai 2,4Kg</a>
+                                    </h2>
+
+                                    <div class="ic-price">
+                                        Đang cập nhật
+                                    </div>
+
+                                    <span class="ic-warning"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-xs-6">
+                                <div class="ic-product">
+                                    <div class="ic-thumb">
+                                        <a href="san_pham_chi_tiet.html">
+                                            <img src="images/q/p-8.jpg" alt="" title="" />
+                                        </a>
+                                    </div>
+
+                                    <h2>
+                                        <a href="san_pham_chi_tiet.html">Kem Đánh Răng P/S Trà Xanh 200g</a>
+                                    </h2>
+
+                                    <div class="ic-price">
+                                        10.000đ
+                                    </div>
+
+                                    <span class="ic-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-xs-6">
+                                <div class="ic-product">
+                                    <div class="ic-thumb">
+                                        <a href="san_pham_chi_tiet.html">
+                                            <img src="images/q/p-6.jpg" alt="" title="" />
+                                        </a>
+                                    </div>
+
+                                    <h2>
+                                        <a href="san_pham_chi_tiet.html">Mô Hình LEGO Ninjago - Đảo Nhện Độc 70604</a>
+                                    </h2>
+
+                                    <div class="ic-price">
+                                        550.000đ
+                                    </div>
+
+                                    <span class="ic-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ic-products">
+                        <div class="ic-header-title">
+                            <h1>Ô tô, xe máy & Phụ kiện</h1>
+
+
+                            <div class="ic-fit">
+                                <select size="1" name="order">
+                                    <option value="1">- Phổ biến</option>
+                                    <option value="0">- Mới Update</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3 col-xs-6">
+                                <div class="ic-product">
+                                    <div class="ic-thumb">
+                                        <a href="san_pham_chi_tiet.html">
+                                            <img src="images/q/p-1.jpg" alt="" title="" />
+                                        </a>
+                                    </div>
+
+                                    <h2>
+                                        <a href="san_pham_chi_tiet.html">Combo Chăm Sóc Tóc Tresemme Keratin Smooth...</a>
+                                    </h2>
+
+                                    <div class="ic-price">
+                                        100.000đ
+                                    </div>
+
+                                    <span class="ic-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-xs-6">
+                                <div class="ic-product">
+                                    <div class="ic-thumb">
+                                        <a href="san_pham_chi_tiet.html">
+                                            <img src="images/q/p-7.jpg" alt="" title="" />
+                                        </a>
+                                    </div>
+
+                                    <h2>
+                                        <a href="san_pham_chi_tiet.html">Nước Giặt Dịu Nhẹ Omo Chai 2,4Kg</a>
+                                    </h2>
+
+                                    <div class="ic-price">
+                                        Đang cập nhật
+                                    </div>
+
+                                    <span class="ic-warning"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-xs-6">
+                                <div class="ic-product">
+                                    <div class="ic-thumb">
+                                        <a href="san_pham_chi_tiet.html">
+                                            <img src="images/q/p-8.jpg" alt="" title="" />
+                                        </a>
+                                    </div>
+
+                                    <h2>
+                                        <a href="san_pham_chi_tiet.html">Kem Đánh Răng P/S Trà Xanh 200g</a>
+                                    </h2>
+
+                                    <div class="ic-price">
+                                        10.000đ
+                                    </div>
+
+                                    <span class="ic-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-xs-6">
+                                <div class="ic-product">
+                                    <div class="ic-thumb">
+                                        <a href="san_pham_chi_tiet.html">
+                                            <img src="images/q/p-6.jpg" alt="" title="" />
+                                        </a>
+                                    </div>
+
+                                    <h2>
+                                        <a href="san_pham_chi_tiet.html">Mô Hình LEGO Ninjago - Đảo Nhện Độc 70604</a>
+                                    </h2>
+
+                                    <div class="ic-price">
+                                        550.000đ
+                                    </div>
+
+                                    <span class="ic-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-xs-6">
+                                <div class="ic-product">
+                                    <div class="ic-thumb">
+                                        <a href="san_pham_chi_tiet.html">
+                                            <img src="images/q/p-1.jpg" alt="" title="" />
+                                        </a>
+                                    </div>
+
+                                    <h2>
+                                        <a href="san_pham_chi_tiet.html">Combo Chăm Sóc Tóc Tresemme Keratin Smooth...</a>
+                                    </h2>
+
+                                    <div class="ic-price">
+                                        100.000đ
+                                    </div>
+
+                                    <span class="ic-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-xs-6">
+                                <div class="ic-product">
+                                    <div class="ic-thumb">
+                                        <a href="san_pham_chi_tiet.html">
+                                            <img src="images/q/p-7.jpg" alt="" title="" />
+                                        </a>
+                                    </div>
+
+                                    <h2>
+                                        <a href="san_pham_chi_tiet.html">Nước Giặt Dịu Nhẹ Omo Chai 2,4Kg</a>
+                                    </h2>
+
+                                    <div class="ic-price">
+                                        Đang cập nhật
+                                    </div>
+
+                                    <span class="ic-warning"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-xs-6">
+                                <div class="ic-product">
+                                    <div class="ic-thumb">
+                                        <a href="san_pham_chi_tiet.html">
+                                            <img src="images/q/p-8.jpg" alt="" title="" />
+                                        </a>
+                                    </div>
+
+                                    <h2>
+                                        <a href="san_pham_chi_tiet.html">Kem Đánh Răng P/S Trà Xanh 200g</a>
+                                    </h2>
+
+                                    <div class="ic-price">
+                                        10.000đ
+                                    </div>
+
+                                    <span class="ic-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-xs-6">
+                                <div class="ic-product">
+                                    <div class="ic-thumb">
+                                        <a href="san_pham_chi_tiet.html">
+                                            <img src="images/q/p-6.jpg" alt="" title="" />
+                                        </a>
+                                    </div>
+
+                                    <h2>
+                                        <a href="san_pham_chi_tiet.html">Mô Hình LEGO Ninjago - Đảo Nhện Độc 70604</a>
+                                    </h2>
+
+                                    <div class="ic-price">
+                                        550.000đ
+                                    </div>
+
+                                    <span class="ic-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-xs-6">
+                                <div class="ic-product">
+                                    <div class="ic-thumb">
+                                        <a href="san_pham_chi_tiet.html">
+                                            <img src="images/q/p-2.jpg" alt="" title="" />
+                                        </a>
+                                    </div>
+
+                                    <h2>
+                                        <a href="san_pham_chi_tiet.html">Combo Chăm Sóc Tóc Tresemme Keratin Smooth...</a>
+                                    </h2>
+
+                                    <div class="ic-price">
+                                        100.000đ
+                                    </div>
+
+                                    <span class="ic-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-xs-6">
+                                <div class="ic-product">
+                                    <div class="ic-thumb">
+                                        <a href="san_pham_chi_tiet.html">
+                                            <img src="images/q/p-3.jpg" alt="" title="" />
+                                        </a>
+                                    </div>
+
+                                    <h2>
+                                        <a href="san_pham_chi_tiet.html">Nước Giặt Dịu Nhẹ Omo Chai 2,4Kg</a>
+                                    </h2>
+
+                                    <div class="ic-price">
+                                        Đang cập nhật
+                                    </div>
+
+                                    <span class="ic-warning"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-xs-6">
+                                <div class="ic-product">
+                                    <div class="ic-thumb">
+                                        <a href="san_pham_chi_tiet.html">
+                                            <img src="images/q/p-7.jpg" alt="" title="" />
+                                        </a>
+                                    </div>
+
+                                    <h2>
+                                        <a href="san_pham_chi_tiet.html">Kem Đánh Răng P/S Trà Xanh 200g</a>
+                                    </h2>
+
+                                    <div class="ic-price">
+                                        10.000đ
+                                    </div>
+
+                                    <span class="ic-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-xs-6">
+                                <div class="ic-product">
+                                    <div class="ic-thumb">
+                                        <a href="san_pham_chi_tiet.html">
+                                            <img src="images/q/p-5.jpg" alt="" title="" />
+                                        </a>
+                                    </div>
+
+                                    <h2>
+                                        <a href="san_pham_chi_tiet.html">Mô Hình LEGO Ninjago - Đảo Nhện Độc 70604</a>
+                                    </h2>
+
+                                    <div class="ic-price">
+                                        550.000đ
+                                    </div>
+
+                                    <span class="ic-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ic-footer -->
+    <footer id="ic-footer" class="ic-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <h4>Danh mục</h4>
+
+                    <ul>
+                        <li><a href="#" title="">Ô tô, xe máy &amp; Phụ kiện</a></li>
+                        <li><a href="#" title="">Lò vi sóng</a></li>
+                        <li><a href="#" title="">Điện thoại &amp; Máy tính bảng</a></li>
+                        <li><a href="#" title="">Máy vi tính &amp; Laptop</a></li>
+                        <li><a href="#" title="">Chăm sóc sức khỏe &amp; Làm đẹp</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="col-sm-6 col-md-3">
+                    <h4>Giới thiệu</h4>
+
+                    <ul>
+                        <li><a href="#" title="">Giới thiệu</a></li>
+                        <li><a href="#" title="">Tuyển Dụng</a></li>
+                        <li><a href="#" title="">Chính sách bảo mật</a></li>
+                        <li><a href="#" title="">Điều khoản sử dụng</a></li>
+                        <li><a href="#" title="">Ưu đãi doanh nghiệp</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-6 col-md-3">
+                    <h4>Đối tác của iCheck</h4>
+
+                    <ul>
+                        <li><a href="#" title="">Đối tác 1</a></li>
+                        <li><a href="#" title="">Đối tác 2</a></li>
+                        <li><a href="#" title="">Đối tác 3</a></li>
+                        <li><a href="#" title="">Đối tác 4</a></li>
+                        <li><a href="#" title="">Đối tác 5</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-6 col-md-3">
+                    <h4>Download App</h4>
+
+                    <div class="ic-footer-download">
+                        <a href="#" target="_blank" rel="nofollow" title="Download on the Appstore">Download on the Appstore</a>
+                        <a class="ic-google-play" href="#" target="_blank" rel="nofollow" title="Download on the Google Play">Download on the Google Play</a>
+                        <a class="ic-windows-phone" href="#" target="_blank" rel="nofollow" title="Download on the Windows Phone Store">Download on the Windows Phone Store</a>
+                        <a class="ic-blackBerry-world" href="#" target="_blank" rel="nofollow" title="Download on the BlackBerry World">Download on the BlackBerry World</a>
+                    </div>
+
+                    <h4>Liên hệ</h4>
+
+                    <div class="ic-footer-contact">
+                        <address>Số 50, ngõ 125, Nguyễn Ngọc Vũ, Phường Trung Hoà, Q. Cầu Giấy, TP. Hà Nội</address>
+
+                        <div class="ic-social">
+                            <a class="ic-fb" href="#" target="_blank" rel="nofollow">Facebook</a>
+                            <a class="ic-mail" href="#" target="_blank" rel="nofollow">Gửi Email</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END: ic-footer -->
+
+    <div id="ic-copyright" class="ic-copyright">
+        <div class="container">
+            <p>Bản quyền thuôc về iCheck.vn 2017</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

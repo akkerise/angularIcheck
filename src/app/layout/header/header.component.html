@@ -1,0 +1,78 @@
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header ic-logo">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="javascript:" [routerLink]="[OpenLink('HOME')]">iCheck.vn</a>
+            </div>
+
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="pull-right ic-header-user" *ngIf="!currentUser">
+                    <ul>
+                        <li>
+                            <a class="ic-a" href="javascript:" [routerLink]="[OpenLink('LOGIN')]">Đăng ký</a>
+                        </li>
+                        <li>
+                            <a class="ic-a" href="javascript:" [routerLink]="[OpenLink('LOGIN')]">Đăng nhập</a>
+                            <div class="ic-drop-option">
+                                <div class="ic-drop-option-box ic-drop-login">
+                                    <h5>Đăng nhập tài khoản iCheck</h5>
+                                    <a href="javascript:" (click)="authenticate('facebook')" class="ic-fb">Đăng nhập Facebook</a>
+                                    <a href="javascript:" (click)="authenticate('google')" class="ic-google">Đăng nhập Google</a>
+                                    <a href="#">Đăng nhập số điện thoại</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pull-right ic-header-user" *ngIf="currentUser">
+                    <ul>
+                        <li>
+                            <a class="ic-a ic-a-notification">{{count?.all}}</a>
+                            <div class="ic-drop-option">
+                                <div class="ic-drop-option-box ic-drop-notification">
+                                    <sd-notifications></sd-notifications>
+
+                                    <div class="ic-notification-more">
+                                        <a href="#">Xem tất cả</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="ic-a" href="javascript:" [routerLink]="[OpenLink('PROFILE')]">
+                                <ick-img src="{{currentUser.avatar}}" width="35" height="35" alt="{{currentUser.social_name}}" title="{{currentUser.social_name}}" size="thumb"></ick-img>
+                            </a>
+                            <div class="ic-drop-option">
+                                <div class="ic-drop-option-box ic-drop-user">
+                                    <h5>{{currentUser?.social_name}}</h5>
+                                    <a href="javascript:" [routerLink]="[OpenLink('PROFILE')]">Thông tin cá nhân</a>
+                                    <a href="#" (click)="navAuthen()">Đăng xuất</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--<div class="pull-right ic-header-user">-->
+                <!--{{currentUser ? currentUser.social_name : '' }}-->
+                <!--<a href="javascript:" (click)="navAuthen()">{{currentUser  ? 'logout' : 'login'}}</a>-->
+                <!--</div>-->
+
+                <form class="navbar-form navbar-left">
+                    <div class="ic-form-search">
+                        <input type="text" class="ic-form-input" placeholder="Vui lòng nhập tên sản phẩm bạn muốn tra cứu" />
+                        <input type="submit" name="submit" class="ic-form-button" value="" />
+                    </div>
+                </form>
+
+                <div class="navbar-left ic-header-post">
+                    <a href="javascript:" [routerLink]="[OpenLink('FOLLOW')]">Đăng bài</a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
